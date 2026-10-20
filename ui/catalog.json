@@ -1,0 +1,2226 @@
+{
+ "generated_at": "2026-10-20",
+ "source": "https://repoquarry.dev",
+ "products": [
+  {
+   "id": "1password",
+   "name": "1Password",
+   "category": "password-managers",
+   "pricing": "See pricing page",
+   "summary": "Paid, cloud-hosted password manager (Individual, Families, Teams and Business plans) with browser autofill, sync across devices, shared vaults, built-in 2FA codes, passkeys and Watchtower breach alerts.",
+   "patterns": [
+    "^1Password\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "ente-auth",
+     "name": "Ente Auth",
+     "repo": "ente/ente",
+     "description": "Free, end-to-end encrypted 2FA (TOTP) code app for mobile and desktop with optional encrypted cloud sync; usable offline without an account.",
+     "coverage": "full",
+     "note": "Replaces 1Password's built-in 2FA codes as a separate app; does not store passwords.",
+     "license": "AGPL-3.0-only",
+     "stars": 29432
+    },
+    {
+     "id": "vaultwarden",
+     "name": "Vaultwarden",
+     "repo": "dani-garcia/vaultwarden",
+     "description": "Lightweight Rust server compatible with the official Bitwarden apps and browser extensions, built for self-hosting on small machines.",
+     "coverage": "partial",
+     "note": "Self-hosted vault server; autofill and apps come from the official Bitwarden clients. Feature parity not checked.",
+     "license": "AGPL-3.0-only",
+     "stars": 69188
+    },
+    {
+     "id": "keepassxc",
+     "name": "KeePassXC",
+     "repo": "keepassxreboot/keepassxc",
+     "description": "Offline desktop password manager for Windows, macOS and Linux that stores your vault in an encrypted KeePass (KDBX) file you control.",
+     "coverage": "partial",
+     "note": "Local vault with browser autofill, TOTP, passkeys and HIBP reports; no built-in sync or sharing, no mobile app.",
+     "license": "GPL-2.0-only OR GPL-3.0-only",
+     "stars": 29270
+    },
+    {
+     "id": "bitwarden",
+     "name": "Bitwarden",
+     "repo": "bitwarden/server",
+     "description": "Open-source password manager with browser, desktop, mobile and CLI clients; use the hosted service or self-host the official server with Docker.",
+     "coverage": "partial",
+     "note": "Vault, autofill, sync and organisation sharing; feature parity with 1Password (Watchtower, passkeys, TOTP tiers) not checked.",
+     "license": "AGPL-3.0-only",
+     "stars": 20373
+    },
+    {
+     "id": "aegis",
+     "name": "Aegis Authenticator",
+     "repo": "beemdevelopment/Aegis",
+     "description": "Free, open-source Android app for 2FA (TOTP/HOTP) codes with an encrypted local vault and automatic encrypted backups.",
+     "coverage": "partial",
+     "note": "Replaces built-in 2FA codes on Android only; no sync across devices, no passwords.",
+     "license": "GPL-3.0-only",
+     "stars": 13312
+    },
+    {
+     "id": "keepassdx",
+     "name": "KeePassDX",
+     "repo": "Kunzisoft/KeePassDX",
+     "description": "Local password and passkey manager for Android that opens KeePass (KDBX) files, with autofill, TOTP codes and biometric unlock.",
+     "coverage": "partial",
+     "note": "Android-only local vault with autofill, TOTP and passkeys; pair with KeePassXC on desktop and your own file sync.",
+     "license": "GPL-3.0-only",
+     "stars": 7486
+    },
+    {
+     "id": "gopass",
+     "name": "gopass",
+     "repo": "gopasspw/gopass",
+     "description": "Command-line password manager for teams, a drop-in replacement for pass with GPG or age encryption and git-versioned shared stores.",
+     "coverage": "partial",
+     "note": "CLI vault with git sync and team recipients; browser integration is optional, no mobile app. For technical users.",
+     "license": "MIT",
+     "stars": 7262
+    },
+    {
+     "id": "keepass2android",
+     "name": "Keepass2Android",
+     "repo": "PhilippC/keepass2android",
+     "description": "Android password manager for KeePass (KDBX) databases with built-in cloud storage sync, autofill and an offline-only variant.",
+     "coverage": "partial",
+     "note": "Android client for a KeePass file synced through your own cloud storage; pair with KeePassXC on desktop.",
+     "license": "GPL-3.0-only",
+     "stars": 6303
+    },
+    {
+     "id": "passbolt",
+     "name": "Passbolt",
+     "repo": "passbolt/passbolt_api",
+     "description": "Self-hosted password manager built for teams, with end-to-end encrypted sharing, browser extensions, mobile apps and a CLI.",
+     "coverage": "partial",
+     "note": "Team-focused vault with sharing and browser autofill; some team features are in the paid Pro edition. Feature parity not checked.",
+     "license": "AGPL-3.0-only",
+     "stars": 6174
+    },
+    {
+     "id": "lesspass",
+     "name": "LessPass",
+     "repo": "lesspass/lesspass",
+     "description": "Stateless password generator that derives each site password from a master password, so there is no vault to store or sync.",
+     "coverage": "partial",
+     "note": "Generates site passwords on demand; cannot store existing passwords, so it only fits a different workflow.",
+     "license": "GPL-3.0-only",
+     "stars": 6064
+    },
+    {
+     "id": "aliasvault",
+     "name": "AliasVault",
+     "repo": "aliasvault/aliasvault",
+     "description": "End-to-end encrypted password manager with built-in email aliases, TOTP and passkeys; self-host with Docker or use the hosted cloud.",
+     "coverage": "partial",
+     "note": "Personal vault with autofill, TOTP and passkeys plus email aliases; pre-1.0, no sharing. Feature parity not checked.",
+     "license": "AGPL-3.0-only",
+     "stars": 3271
+    },
+    {
+     "id": "teampass",
+     "name": "Teampass",
+     "repo": "nilsteampassnet/TeamPass",
+     "description": "Self-hosted PHP/MySQL password vault for teams with folder-level access control, per-user encryption keys, audit trail and a browser extension.",
+     "coverage": "partial",
+     "note": "Web-based team vault with folder permissions and a browser extension; no mobile apps.",
+     "license": "GPL-3.0-only",
+     "stars": 1835
+    },
+    {
+     "id": "keepassium",
+     "name": "KeePassium",
+     "repo": "keepassium/KeePassium",
+     "description": "KeePass-compatible password manager for iPhone, iPad and Mac with Password AutoFill and database sync through the iOS Files providers.",
+     "coverage": "partial",
+     "note": "Apple-platform client for a KeePass file you sync via your own cloud storage; no sharing. Feature parity not checked.",
+     "license": "GPL-3.0-only",
+     "stars": 1712
+    },
+    {
+     "id": "2fas",
+     "name": "2FAS Authenticator",
+     "repo": "twofas/2fas-android",
+     "description": "Open-source 2FA (TOTP/HOTP) code app for Android and iOS, with a companion browser extension for sending codes to your browser.",
+     "coverage": "partial",
+     "note": "Replaces built-in 2FA codes on phones; no passwords. Backup and sync behaviour not checked.",
+     "license": "GPL-3.0-only",
+     "stars": 1538
+    },
+    {
+     "id": "proton-pass",
+     "name": "Proton Pass",
+     "repo": "protonpass/android-pass",
+     "description": "End-to-end encrypted password manager from Proton with open-source GPL-3.0 clients; the sync service is Proton's cloud and cannot be self-hosted.",
+     "coverage": "partial",
+     "note": "Hosted vault with open clients; not self-hostable. Sharing, passkeys and other parity not checked.",
+     "license": "GPL-3.0-or-later",
+     "stars": 798
+    },
+    {
+     "id": "pass",
+     "name": "pass (password-store)",
+     "repo": "zx2c4/password-store",
+     "description": "The standard Unix command-line password manager; each password is a GPG-encrypted file in a folder you can version and sync with git.",
+     "coverage": "partial",
+     "note": "CLI vault with git sync; autofill only through third-party browser plugins. For technical users.",
+     "license": "GPL-2.0-or-later",
+     "stars": 758
+    },
+    {
+     "id": "psono",
+     "name": "Psono",
+     "repo": "psono/psono-server",
+     "description": "Self-hosted password manager for companies with client-side encryption, team sharing, browser extensions and mobile apps.",
+     "coverage": "partial",
+     "note": "Self-hosted team vault with sharing and browser extensions. Feature parity not checked.",
+     "license": "Apache-2.0",
+     "stars": 110
+    }
+   ]
+  },
+  {
+   "id": "adobe-creative-cloud",
+   "name": "Adobe Creative Cloud",
+   "category": "creative-suite",
+   "pricing": "See pricing page",
+   "summary": "Paid subscription suite of Adobe desktop apps for photo, vector, raw photo, video, motion graphics, page layout and PDF work.",
+   "patterns": [
+    "^Adobe (Creative Cloud|Creative Suite|Photoshop|Illustrator|Lightroom|Premiere Pro|After Effects|InDesign|Acrobat|Audition|Animate|Media Encoder|Substance)"
+   ],
+   "alternatives": [
+    {
+     "id": "stirling-pdf",
+     "name": "Stirling PDF",
+     "repo": "Stirling-Tools/Stirling-PDF",
+     "description": "Open-core PDF platform with 50+ tools (edit, merge, split, sign, redact, convert, OCR) as a desktop app, browser UI or self-hosted server.",
+     "coverage": "partial",
+     "note": "Broad PDF toolset (merge, split, sign, redact, convert, OCR); parts of the code are proprietary.",
+     "license": "Open core; MIT except engine/, desktop, SaaS and proprietary directories (Stirling PDF User License)",
+     "stars": 94356
+    },
+    {
+     "id": "photocraft",
+     "name": "PhotoCraft",
+     "repo": "storytold/photocraft",
+     "description": "Clean-room, Photoshop-style image editor written in Rust, with layers, masks, adjustment layers and PSD support. Part of the ArtCraft suite.",
+     "coverage": "partial",
+     "note": "Early alpha; the README says it is not yet a Photoshop replacement for daily professional work.",
+     "license": "MIT OR Apache-2.0",
+     "stars": 65338
+    },
+    {
+     "id": "graphite",
+     "name": "Graphite",
+     "repo": "GraphiteEditor/Graphite",
+     "description": "Node-based, nondestructive vector and raster graphics editor written in Rust, available in alpha as an offline-capable web app.",
+     "coverage": "partial",
+     "note": "Alpha; procedural vector editing with a node graph, not a like-for-like Illustrator workflow.",
+     "license": "MIT OR Apache-2.0",
+     "stars": 27629
+    },
+    {
+     "id": "pdfcraft",
+     "name": "PdfCraft",
+     "repo": "storytold/pdfcraft",
+     "description": "Clean-room, Acrobat-style PDF reader and editor written in Rust, for viewing, organizing, commenting, forms, signing and redaction. Part of the ArtCraft suite.",
+     "coverage": "partial",
+     "note": "Alpha; weak at editing existing text, OCR and Office conversion.",
+     "license": "MIT OR Apache-2.0",
+     "stars": 15137
+    },
+    {
+     "id": "filmcraft",
+     "name": "FilmCraft",
+     "repo": "storytold/filmcraft",
+     "description": "Clean-room, Premiere Pro-style non-linear video editor written in Rust, with colour, audio, titles and captions. Part of the ArtCraft suite.",
+     "coverage": "partial",
+     "note": "Alpha; no .prproj import or plug-ins, and the README estimates ~56% ready for real work.",
+     "license": "MIT OR Apache-2.0",
+     "stars": 14308
+    },
+    {
+     "id": "darktable",
+     "name": "darktable",
+     "repo": "darktable-org/darktable",
+     "description": "Photography workflow app and non-destructive raw developer with a lighttable library and darkroom editing.",
+     "coverage": "partial",
+     "note": "Mature raw developer and library, but the README says it is not a Lightroom replacement; workflows differ.",
+     "license": "GPL-3.0",
+     "stars": 13287
+    },
+    {
+     "id": "lightcraft",
+     "name": "LightCraft",
+     "repo": "storytold/lightcraft",
+     "description": "Clean-room, Lightroom-style photo library and non-destructive raw developer written in Rust. Part of the ArtCraft suite.",
+     "coverage": "partial",
+     "note": "Alpha; the README estimates ~51% of a Lightroom replacement for a typical working photographer.",
+     "license": "MIT OR Apache-2.0",
+     "stars": 13286
+    },
+    {
+     "id": "vectorcraft",
+     "name": "VectorCraft",
+     "repo": "storytold/vectorcraft",
+     "description": "Clean-room, Illustrator-style vector illustration app written in Rust, with SVG, PDF and .ai (PDF-compatible) files. Part of the ArtCraft suite.",
+     "coverage": "partial",
+     "note": "Alpha; the README's own estimate is ~65% ready for real work against Illustrator.",
+     "license": "MIT OR Apache-2.0",
+     "stars": 9522
+    },
+    {
+     "id": "effectcraft",
+     "name": "EffectCraft",
+     "repo": "storytold/effectcraft",
+     "description": "Clean-room, After Effects-style motion graphics and compositing tool written in Rust, with keyframes, effects, expressions and 3D. Part of the ArtCraft suite.",
+     "coverage": "partial",
+     "note": "Alpha; no .aep import or AE plug-ins, and the README says it isn't yet a replacement for client work.",
+     "license": "MIT OR Apache-2.0",
+     "stars": 7053
+    },
+    {
+     "id": "gimp",
+     "name": "GIMP",
+     "repo": "GNOME/gimp",
+     "description": "Long-running free raster image editor (GNU Image Manipulation Program) for photo retouching, compositing and image authoring.",
+     "coverage": "partial",
+     "note": "Mature raster editor for retouching and compositing; feature parity with Photoshop not checked.",
+     "license": "GPL-3.0-or-later",
+     "stars": 6519
+    },
+    {
+     "id": "kdenlive",
+     "name": "Kdenlive",
+     "repo": "KDE/kdenlive",
+     "description": "KDE's free non-linear video editor built on the MLT framework, for Windows, macOS and Linux.",
+     "coverage": "partial",
+     "note": "Mature NLE for everyday editing; parity with Premiere Pro not checked.",
+     "license": "GPL-3.0",
+     "stars": 5883
+    },
+    {
+     "id": "designcraft",
+     "name": "DesignCraft",
+     "repo": "storytold/designcraft",
+     "description": "Clean-room, InDesign-style page layout and publishing editor written in Rust, with threaded text frames and styles. Part of the ArtCraft suite.",
+     "coverage": "partial",
+     "note": "Pre-alpha per its roadmap; not an InDesign replacement yet.",
+     "license": "MIT OR Apache-2.0",
+     "stars": 4249
+    },
+    {
+     "id": "scribus",
+     "name": "Scribus",
+     "repo": "scribusproject/scribus",
+     "description": "Long-running open-source desktop publishing app for page layout, with complex-script text and print-ready PDF output.",
+     "coverage": "partial",
+     "note": "Mature desktop publishing; InDesign file compatibility not checked.",
+     "license": "GPL-2.0-or-later",
+     "stars": 639
+    }
+   ]
+  },
+  {
+   "id": "box",
+   "name": "Box",
+   "category": "file-storage",
+   "pricing": "See pricing page",
+   "summary": "Box sells cloud file storage, sharing and business content tools. The alternatives cover file access and sharing rather than Box's full governance, AI and e-signature platform.",
+   "patterns": [
+    "^Box( Drive| Tools| Edit)?$"
+   ],
+   "alternatives": [
+    {
+     "id": "nextcloud-server",
+     "name": "Nextcloud Server",
+     "repo": "nextcloud/server",
+     "description": "Self-hosted file sync and share server with desktop and mobile clients, share links, file versions and an app store for calendar, contacts and more.",
+     "coverage": "partial",
+     "note": "File sync, sharing and browser access cover everyday file collaboration; Box governance, retention and enterprise workflow parity are not assumed.",
+     "license": "AGPL-3.0-or-later",
+     "stars": 37149
+    },
+    {
+     "id": "seafile",
+     "name": "Seafile",
+     "repo": "haiwen/seafile",
+     "description": "Self-hosted file sync and share with selective sync, encrypted libraries, share and upload links and version history; Pro edition free up to 3 users.",
+     "coverage": "partial",
+     "note": "File sync, share links and online access cover daily file work; Some enterprise features require Seafile Professional; Box governance is not covered.",
+     "license": "AGPL-3.0-only",
+     "stars": 15339
+    },
+    {
+     "id": "opencloud",
+     "name": "OpenCloud",
+     "repo": "opencloud-eu/opencloud",
+     "description": "Apache-2.0 file sync and share server (community continuation of oCIS) that stores everything on the filesystem with no database; Docker install.",
+     "coverage": "partial",
+     "note": "Browser file management and sharing cover team file access; this comparison does not claim Box governance, compliance or desktop client parity.",
+     "license": "Apache-2.0",
+     "stars": 6183
+    }
+   ]
+  },
+  {
+   "id": "canva",
+   "name": "Canva",
+   "category": "graphic-design",
+   "pricing": "See pricing page",
+   "summary": "Browser and app-based design tool with a large template library for social posts, presentations, print, whiteboards and brand assets; paid tiers add premium content, brand kits and team features.",
+   "patterns": [
+    "^Canva\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "excalidraw",
+     "name": "Excalidraw",
+     "repo": "excalidraw/excalidraw",
+     "description": "Hand-drawn style infinite whiteboard for sketches, diagrams and wireframes, with end-to-end encrypted collaboration on excalidraw.com.",
+     "coverage": "partial",
+     "note": "Freeform sketch whiteboard; no Canva-style templates.",
+     "license": "MIT",
+     "stars": 134019
+    },
+    {
+     "id": "presenton",
+     "name": "Presenton",
+     "repo": "presenton/presenton",
+     "description": "AI presentation generator with built-in templates, drag-edit slides and editable PPTX/PDF export; desktop app or self-hosted Docker, BYO model.",
+     "coverage": "partial",
+     "note": "AI-generated, editable decks from templates; presentations only.",
+     "license": "Apache-2.0",
+     "stars": 11162
+    },
+    {
+     "id": "vue-fabric-editor",
+     "name": "vue-fabric-editor (Kuaitu)",
+     "repo": "ikuaitu/vue-fabric-editor",
+     "description": "Plugin-based browser image and poster editor built on Fabric.js and Vue, with templates, custom fonts, PSD import and PNG/SVG export.",
+     "coverage": "partial",
+     "note": "Basic template-based graphics editor; you supply your own templates and assets.",
+     "license": "MIT",
+     "stars": 7994
+    },
+    {
+     "id": "grida",
+     "name": "Grida",
+     "repo": "gridaco/grida",
+     "description": "Open-source canvas editor (Rust/Skia engine) for graphics, images and presentations, with Figma import and optional BYOK or local AI.",
+     "coverage": "partial",
+     "note": "Freeform canvas for graphics and presentations; no Canva-style template library documented.",
+     "license": "Apache-2.0",
+     "stars": 2678
+    },
+    {
+     "id": "wbo",
+     "name": "WBO (Whitebophir)",
+     "repo": "lovasoa/whitebophir",
+     "description": "Simple self-hosted collaborative whiteboard where many users draw on a large shared board in real time; boards are persisted.",
+     "coverage": "partial",
+     "note": "Basic real-time drawing board; no templates or sticky-note workflows.",
+     "license": "AGPL-3.0",
+     "stars": 2670
+    },
+    {
+     "id": "yft-design",
+     "name": "yft-design",
+     "repo": "dromara/yft-design",
+     "description": "Browser poster and image design editor (Vue 3, Fabric.js) with PSD and PDF import and image, SVG and PDF export. Chinese-language docs.",
+     "coverage": "partial",
+     "note": "Poster and image editor without Canva's template library or team features.",
+     "license": "MIT",
+     "stars": 1661
+    },
+    {
+     "id": "doory",
+     "name": "Doory",
+     "repo": "shaongitbd/doory",
+     "description": "Self-hostable browser design editor for posters, social posts, slides and cards, with templates, brand kits, co-editing and PNG/PDF/MP4 export.",
+     "coverage": "partial",
+     "note": "Broad Canva-like feature set, but only ten starter templates; no large template or stock library.",
+     "license": "AAL",
+     "stars": 1446
+    },
+    {
+     "id": "hycanvas",
+     "name": "HyCanvas",
+     "repo": "hyscaler/HyCanvas",
+     "description": "Self-hosted, web-only design platform for social graphics, presentations, video, whiteboards and print, with templates, brand kits and optional BYOK AI.",
+     "coverage": "partial",
+     "note": "Covers most Canva document types; very new and collaboration is not built yet.",
+     "license": "AGPL-3.0-only",
+     "stars": 231
+    }
+   ]
+  },
+  {
+   "id": "chatgpt-plus",
+   "name": "ChatGPT Plus",
+   "category": "ai-chat",
+   "pricing": "Plus $20/month; Pro from $100/month",
+   "summary": "OpenAI's paid ChatGPT subscription for chat with frontier models, file analysis and web search.",
+   "patterns": [
+    "^ChatGPT\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "ollama",
+     "name": "Ollama",
+     "repo": "ollama/ollama",
+     "description": "Local model runner that downloads and serves open LLMs (Gemma, Qwen, DeepSeek, gpt-oss and more) with a CLI and local API.",
+     "coverage": "partial",
+     "note": "Terminal chat plus a local API for other apps; answer quality depends on the model you run. Local models are generally less capable than paid frontier models.",
+     "license": "MIT",
+     "stars": 183535
+    },
+    {
+     "id": "open-webui",
+     "name": "Open WebUI",
+     "repo": "open-webui/open-webui",
+     "description": "Self-hosted AI chat platform for Ollama and OpenAI-compatible APIs, with RAG over your files, web search and multi-user admin.",
+     "coverage": "partial",
+     "note": "Replaces the chat interface; answer quality depends on the model you run. Local models are generally less capable than paid frontier models.",
+     "license": "Open WebUI License (BSD-3 style + branding clause); not OSI-approved",
+     "stars": 155942
+    },
+    {
+     "id": "lobehub",
+     "name": "LobeHub (formerly LobeChat)",
+     "repo": "lobehub/lobehub",
+     "description": "Self-hostable AI chat and agent workspace (formerly LobeChat) with multi-provider models, plugins and a desktop app.",
+     "coverage": "partial",
+     "note": "Replaces the chat interface; answer quality depends on the model you run. Local models are generally less capable than paid frontier models.",
+     "license": "LobeHub Community License (Apache-2.0 + conditions); not OSI-approved",
+     "stars": 83280
+    },
+    {
+     "id": "anything-llm",
+     "name": "AnythingLLM",
+     "repo": "Mintplex-Labs/anything-llm",
+     "description": "All-in-one desktop or Docker app to chat with your documents using local or cloud LLMs, with agents and a built-in vector database.",
+     "coverage": "partial",
+     "note": "Replaces the chat interface and file chat; answer quality depends on the model you run. Local models are generally less capable than paid frontier models.",
+     "license": "MIT",
+     "stars": 67228
+    },
+    {
+     "id": "librechat",
+     "name": "LibreChat",
+     "repo": "LibreChat-AI/LibreChat",
+     "description": "Self-hosted ChatGPT-style interface for many AI providers, with agents, MCP, file chat, web search and multi-user auth.",
+     "coverage": "partial",
+     "note": "Replaces the chat interface; answer quality depends on the model you run. Paid APIs get closer to ChatGPT quality but bill per token.",
+     "license": "MIT",
+     "stars": 45838
+    },
+    {
+     "id": "jan",
+     "name": "Jan",
+     "repo": "janhq/jan",
+     "description": "Desktop app that downloads and runs LLMs from Hugging Face offline, with optional cloud model connections and a local OpenAI-compatible API.",
+     "coverage": "partial",
+     "note": "Replaces the chat interface; answer quality depends on the model you run. Local models are generally less capable than paid frontier models.",
+     "license": "Apache-2.0",
+     "stars": 44975
+    },
+    {
+     "id": "weknora",
+     "name": "WeKnora",
+     "repo": "Tencent/WeKnora",
+     "description": "Self-hosted LLM knowledge platform from Tencent that turns your documents into cited RAG Q&A, a reasoning agent and an auto-maintained wiki.",
+     "coverage": "partial",
+     "note": "Replaces chatting with your documents (with citations) across shared knowledge bases; answer quality depends on the model you connect.",
+     "license": "MIT",
+     "stars": 34445
+    },
+    {
+     "id": "octop",
+     "name": "Octop",
+     "repo": "TencentCloud/Octop",
+     "description": "Self-hosted multi-user, multi-agent AI assistant with a web dashboard, desktop apps, IM channels, document RAG and Ollama or API models.",
+     "coverage": "partial",
+     "note": "Replaces the chat app and document Q&A for a household or small team; answer quality depends on the model you connect. No built-in web search answers documented.",
+     "license": "MIT",
+     "stars": 9711
+    }
+   ]
+  },
+  {
+   "id": "clickup",
+   "name": "ClickUp",
+   "category": "project-management",
+   "pricing": "See pricing page",
+   "summary": "ClickUp combines tasks and project views with documents and automation in paid team plans. Listed alternatives cover task planning rather than the complete ClickUp docs, chat and AI suite.",
+   "patterns": [
+    "^ClickUp\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "openproject",
+     "name": "OpenProject",
+     "repo": "opf/openproject",
+     "description": "Mature web project management with work packages, agile boards, Gantt charts, roadmaps, time and cost tracking, wikis and meetings.",
+     "coverage": "partial",
+     "note": "Tasks and Gantt planning cover part of the project workflow; advanced boards and some team features depend on edition; this is not a replacement for the full automation suite.",
+     "license": "GPL-3.0",
+     "stars": 16448
+    },
+    {
+     "id": "leantime",
+     "name": "Leantime",
+     "repo": "Leantime/leantime",
+     "description": "Goals-focused project management with kanban, Gantt, table and calendar views, sprints, milestones, timesheets and wikis; PHP and MySQL.",
+     "coverage": "partial",
+     "note": "Task lists, Kanban and Gantt planning are included in the OSS version; native integrations and automation rules differ from the paid product.",
+     "license": "AGPL-3.0",
+     "stars": 11842
+    },
+    {
+     "id": "vikunja",
+     "name": "Vikunja",
+     "repo": "go-vikunja/vikunja",
+     "description": "Self-hosted task manager with list, kanban, Gantt and table views, shipped as one binary with bundled SQLite; AGPL-3.0.",
+     "coverage": "partial",
+     "note": "Shared tasks and Gantt views cover everyday planning; it does not reproduce the paid product's automation and reporting suite.",
+     "license": "AGPL-3.0-or-later",
+     "stars": 5774
+    }
+   ]
+  },
+  {
+   "id": "dashlane",
+   "name": "Dashlane Premium",
+   "category": "password-managers",
+   "pricing": "See pricing page",
+   "summary": "Dashlane sells password management with synchronization and security services. Alternatives cover specific vault and sharing tasks; the bundled VPN and complete monitoring services are not replaced.",
+   "patterns": [
+    "^Dashlane\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "keepassxc",
+     "name": "KeePassXC",
+     "repo": "keepassxreboot/keepassxc",
+     "description": "Offline desktop password manager for Windows, macOS and Linux that stores your vault in an encrypted KeePass (KDBX) file you control.",
+     "coverage": "partial",
+     "note": "A local encrypted vault and browser integration cover password storage and filling; device sync and shared-vault administration need separate arrangements; paid-service breach monitoring is not replaced.",
+     "license": "GPL-2.0-only OR GPL-3.0-only",
+     "stars": 29270
+    },
+    {
+     "id": "bitwarden",
+     "name": "Bitwarden",
+     "repo": "bitwarden/server",
+     "description": "Open-source password manager with browser, desktop, mobile and CLI clients; use the hosted service or self-host the official server with Docker.",
+     "coverage": "partial",
+     "note": "Vault access across devices and organization sharing cover core password management; sharing limits depend on plan and some family or team features require paid Bitwarden plans; breach monitoring is not included in this mapping.",
+     "license": "AGPL-3.0-only",
+     "stars": 20373
+    },
+    {
+     "id": "passbolt",
+     "name": "Passbolt",
+     "repo": "passbolt/passbolt_api",
+     "description": "Self-hosted password manager built for teams, with end-to-end encrypted sharing, browser extensions, mobile apps and a CLI.",
+     "coverage": "partial",
+     "note": "Team password sharing covers collaborative credential management; this comparison does not claim personal autofill, device sync, breach monitoring or enterprise policy parity.",
+     "license": "AGPL-3.0-only",
+     "stars": 6174
+    }
+   ]
+  },
+  {
+   "id": "descript",
+   "name": "Descript",
+   "category": "voice",
+   "pricing": "Free plan (1 media hour/month); Hobbyist $24/month, or $16/month billed annually",
+   "summary": "Paid audio and video editor where you edit media by editing its transcript, with AI voices and voice clones.",
+   "patterns": [
+    "^Descript\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "gpt-sovits",
+     "name": "GPT-SoVITS",
+     "repo": "RVC-Boss/GPT-SoVITS",
+     "description": "Few-shot voice cloning and TTS WebUI; 5-second zero-shot or 1-minute fine-tune, five languages, MIT code and weights.",
+     "coverage": "partial",
+     "note": "Voice cloning and text-to-speech only; no transcript-based audio or video editing.",
+     "license": "MIT",
+     "stars": 62951
+    },
+    {
+     "id": "coqui-tts",
+     "name": "Coqui TTS",
+     "repo": "coqui-ai/TTS",
+     "description": "Python TTS library with many models (XTTS-v2, VITS, YourTTS, Bark, Tortoise); original repo unmaintained, continued by idiap fork.",
+     "coverage": "partial",
+     "note": "Voice cloning and text-to-speech only; no transcript-based audio or video editing.",
+     "license": "MPL-2.0",
+     "stars": 46127
+    },
+    {
+     "id": "openvoice",
+     "name": "OpenVoice",
+     "repo": "myshell-ai/OpenVoice",
+     "description": "MyShell's instant voice cloning model with tone-colour transfer, style control and cross-lingual cloning; MIT code and weights.",
+     "coverage": "partial",
+     "note": "Voice cloning and text-to-speech only; no transcript-based audio or video editing.",
+     "license": "MIT",
+     "stars": 37908
+    },
+    {
+     "id": "fish-speech",
+     "name": "Fish Speech",
+     "repo": "fishaudio/fish-speech",
+     "description": "Fish Audio's multilingual TTS and voice cloning stack (Drama 3, S2-Pro) under a source-available community licence.",
+     "coverage": "partial",
+     "note": "Voice cloning and text-to-speech only; no transcript-based audio or video editing.",
+     "license": "Fish Audio Community License 1.0 (source-available, not OSI). Free for research and non-commercial use; commercial use only below USD 500,000 annual revenue; hosted TTS services excluded",
+     "stars": 33224
+    },
+    {
+     "id": "chatterbox",
+     "name": "Chatterbox",
+     "repo": "resemble-ai/chatterbox",
+     "description": "Resemble AI's family of open TTS models (Turbo, Nano, Multilingual) with zero-shot voice cloning from a reference clip.",
+     "coverage": "partial",
+     "note": "Voice cloning and text-to-speech only; no transcript-based audio or video editing.",
+     "license": "MIT",
+     "stars": 27020
+    },
+    {
+     "id": "dia",
+     "name": "Dia",
+     "repo": "nari-labs/dia",
+     "description": "1.6B-parameter English text-to-dialogue model from Nari Labs with two-speaker tags, non-verbal sounds and audio-prompt voice cloning.",
+     "coverage": "partial",
+     "note": "Voice cloning and text-to-speech only; no transcript-based audio or video editing.",
+     "license": "Apache-2.0",
+     "stars": 19407
+    },
+    {
+     "id": "f5-tts",
+     "name": "F5-TTS",
+     "repo": "SWivid/F5-TTS",
+     "description": "Flow-matching text-to-speech research model that clones a voice zero-shot from a reference audio clip.",
+     "coverage": "partial",
+     "note": "Voice cloning and text-to-speech only; no transcript-based audio or video editing.",
+     "license": "MIT",
+     "stars": 15415
+    },
+    {
+     "id": "styletts2",
+     "name": "StyleTTS 2",
+     "repo": "yl4579/StyleTTS2",
+     "description": "Research text-to-speech model using style diffusion and adversarial training, with pretrained LJSpeech and LibriTTS checkpoints.",
+     "coverage": "partial",
+     "note": "Voice cloning and text-to-speech only; no transcript-based audio or video editing.",
+     "license": "MIT",
+     "stars": 6365
+    },
+    {
+     "id": "rescript",
+     "name": "Rescript",
+     "repo": "wassgha/rescript",
+     "description": "Transcript-based audio and video editor; delete words in the transcript to cut the media. Runs on-device. Non-commercial licence.",
+     "coverage": "partial",
+     "note": "Text-based cutting, filler and silence removal; no voice cloning or AI voices, and non-commercial use only.",
+     "license": "PolyForm-Noncommercial-1.0.0",
+     "stars": 937
+    }
+   ]
+  },
+  {
+   "id": "dropbox",
+   "name": "Dropbox",
+   "category": "file-storage",
+   "pricing": "See pricing page",
+   "summary": "Hosted cloud storage with desktop and mobile apps that keep a folder in sync across devices, plus share links, file version history and recovery, camera uploads and team folders. Storage space, history length and transfer limits grow with paid plans.",
+   "patterns": [
+    "^Dropbox$",
+    "^Dropbox (?!Sign|Redeem)"
+   ],
+   "alternatives": [
+    {
+     "id": "immich",
+     "name": "Immich",
+     "repo": "immich-app/immich",
+     "description": "Self-hosted Google Photos-style app with background phone backup, face recognition, CLIP search, shared albums, timeline and map.",
+     "coverage": "full",
+     "note": "Replaces camera upload only.",
+     "license": "AGPL-3.0-only",
+     "stars": 116448
+    },
+    {
+     "id": "nextcloud-server",
+     "name": "Nextcloud Server",
+     "repo": "nextcloud/server",
+     "description": "Self-hosted file sync and share server with desktop and mobile clients, share links, file versions and an app store for calendar, contacts and more.",
+     "coverage": "full",
+     "note": "Covers sync, links, versions, web access and camera upload; you run and back up the server yourself.",
+     "license": "AGPL-3.0-or-later",
+     "stars": 37149
+    },
+    {
+     "id": "ente-photos",
+     "name": "Ente Photos",
+     "repo": "ente/ente",
+     "description": "End-to-end encrypted photo backup with apps for phone, desktop and web, face detection, semantic search and shared albums; hosted or self-hosted.",
+     "coverage": "full",
+     "note": "Replaces camera upload only.",
+     "license": "AGPL-3.0-only",
+     "stars": 29432
+    },
+    {
+     "id": "seafile",
+     "name": "Seafile",
+     "repo": "haiwen/seafile",
+     "description": "Self-hosted file sync and share with selective sync, encrypted libraries, share and upload links and version history; Pro edition free up to 3 users.",
+     "coverage": "full",
+     "note": "Sync, links, versions and web access in the free Community Edition; Pro adds clustering and full-text search.",
+     "license": "AGPL-3.0-only",
+     "stars": 15339
+    },
+    {
+     "id": "syncthing",
+     "name": "Syncthing",
+     "repo": "syncthing/syncthing",
+     "description": "Peer-to-peer continuous folder sync between your own devices, with no central server and optional file versioning. No share links or web file browser.",
+     "coverage": "partial",
+     "note": "Device-to-device sync with versioning only; no share links, web access or cloud copy.",
+     "license": "MPL-2.0",
+     "stars": 89462
+    },
+    {
+     "id": "filebrowser-quantum",
+     "name": "FileBrowser Quantum",
+     "repo": "gtsteffaniak/filebrowser",
+     "description": "Web file manager for folders on your server with search, previews, users, SSO and expiring share links; no sync client or mobile app.",
+     "coverage": "partial",
+     "note": "Browse and share server folders in a browser; no desktop sync, mobile upload or version history.",
+     "license": "Apache-2.0",
+     "stars": 8786
+    },
+    {
+     "id": "opencloud",
+     "name": "OpenCloud",
+     "repo": "opencloud-eu/opencloud",
+     "description": "Apache-2.0 file sync and share server (community continuation of oCIS) that stores everything on the filesystem with no database; Docker install.",
+     "coverage": "partial",
+     "note": "File sync, sharing and web access; no camera-upload features documented here.",
+     "license": "Apache-2.0",
+     "stars": 6183
+    },
+    {
+     "id": "pydio-cells",
+     "name": "Pydio Cells",
+     "repo": "pydio/cells",
+     "description": "Go file sharing platform for teams with web UI, share links, Cells Sync desktop client and mobile apps; free Home edition, paid Connect/Enterprise.",
+     "coverage": "partial",
+     "note": "Sync, sharing and web access in the free Home edition; auditing and compliance features are Enterprise only.",
+     "license": "AGPL-3.0-only",
+     "stars": 2255
+    },
+    {
+     "id": "owncloud-ocis",
+     "name": "ownCloud Infinite Scale (oCIS)",
+     "repo": "owncloud/ocis",
+     "description": "Go-based file sync and share server from ownCloud with spaces, web UI and desktop/mobile clients; official builds carry an EULA barring commercial use.",
+     "coverage": "partial",
+     "note": "Sync, sharing and web access via ownCloud clients; check the EULA on official builds before commercial use.",
+     "license": "Apache-2.0",
+     "stars": 2153
+    },
+    {
+     "id": "filerise",
+     "name": "FileRise",
+     "repo": "error311/FileRise",
+     "description": "Self-hosted PHP web file manager with per-folder ACLs, password and expiry share links, upload-only request links, WebDAV and trash; Pro adds groups and more.",
+     "coverage": "partial",
+     "note": "Web file manager with share and file-request links; no desktop sync, mobile app or version history.",
+     "license": "MIT",
+     "stars": 1021
+    }
+   ]
+  },
+  {
+   "id": "evernote",
+   "name": "Evernote",
+   "category": "notes",
+   "pricing": "Free plan (50 notes, 1 notebook, 1 device); paid Starter, Advanced, Flexible and Unlimited: see pricing page",
+   "summary": "Paid cloud note-taking app with notebooks, tags and web clipping, synced across devices.",
+   "patterns": [
+    "^Evernote\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "joplin",
+     "name": "Joplin",
+     "repo": "laurent22/joplin",
+     "description": "Markdown note-taking app with notebooks, web clipper and end-to-end encrypted sync via Nextcloud, Dropbox, OneDrive, WebDAV, S3 or Joplin Cloud.",
+     "coverage": "partial",
+     "note": "Notebooks, web clipper and E2EE sync via free targets (Nextcloud, WebDAV, Dropbox); feature parity not checked.",
+     "license": "AGPL-3.0-or-later",
+     "stars": 56765
+    },
+    {
+     "id": "siyuan",
+     "name": "SiYuan",
+     "repo": "siyuan-note/siyuan",
+     "description": "Privacy-first personal knowledge base with block-level references, Markdown WYSIWYG editing, database table views and Docker hosting.",
+     "coverage": "partial",
+     "note": "Local notes with web clipping; sync needs a paid PRO or subscription.",
+     "license": "AGPL-3.0",
+     "stars": 46806
+    },
+    {
+     "id": "trilium",
+     "name": "Trilium Notes",
+     "repo": "TriliumNext/Trilium",
+     "description": "Hierarchical note-taking app for large personal knowledge bases, with scripting, encryption and sync to a self-hosted server.",
+     "coverage": "partial",
+     "note": "Evernote import and sync via your own server; no official native mobile app.",
+     "license": "AGPL-3.0",
+     "stars": 38369
+    }
+   ]
+  },
+  {
+   "id": "figma",
+   "name": "Figma",
+   "category": "graphic-design",
+   "pricing": "See pricing page",
+   "summary": "Collaborative browser and desktop design tool for UI design, interactive prototypes, design systems and developer handoff, with FigJam for whiteboarding; paid seats unlock full editing and Dev Mode.",
+   "patterns": [
+    "^Figma\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "excalidraw",
+     "name": "Excalidraw",
+     "repo": "excalidraw/excalidraw",
+     "description": "Hand-drawn style infinite whiteboard for sketches, diagrams and wireframes, with end-to-end encrypted collaboration on excalidraw.com.",
+     "coverage": "partial",
+     "note": "Covers FigJam-style sketching and diagrams; self-hosted builds lack collaboration.",
+     "license": "MIT",
+     "stars": 134019
+    },
+    {
+     "id": "penpot",
+     "name": "Penpot",
+     "repo": "penpot/penpot",
+     "description": "Open-source, self-hostable design and prototyping platform with real-time collaboration, components, design tokens and CSS/SVG inspect.",
+     "coverage": "partial",
+     "note": "Closest open-source match to Figma Design; no whiteboard or slides product.",
+     "license": "MPL-2.0",
+     "stars": 61246
+    },
+    {
+     "id": "pencil-project",
+     "name": "Pencil Project",
+     "repo": "evolus/pencil",
+     "description": "Free desktop GUI prototyping and wireframing tool with stencil collections for web, mobile and desktop mock-ups and diagram drawing.",
+     "coverage": "partial",
+     "note": "Offline wireframes and mock-ups only; no collaboration or handoff.",
+     "license": "GPL-2.0",
+     "stars": 9881
+    },
+    {
+     "id": "open-pencil",
+     "name": "OpenPencil",
+     "repo": "open-pencil/open-pencil",
+     "description": "Open-source design editor that reads and writes Figma .fig files, with components, auto layout, P2P collaboration, optional AI and a CLI.",
+     "coverage": "partial",
+     "note": "Opens .fig files and covers core UI design; young project, prototyping not documented.",
+     "license": "MIT",
+     "stars": 9063
+    },
+    {
+     "id": "quant-ux",
+     "name": "Quant-UX",
+     "repo": "KlausSchaefers/quant-ux",
+     "description": "Prototyping and usability-testing tool to build clickable UI prototypes, run tests with users and get analytics on how they used them.",
+     "coverage": "partial",
+     "note": "Clickable prototypes plus built-in usability testing; weaker visual design tools than Figma.",
+     "license": "GPL-3.0",
+     "stars": 2737
+    },
+    {
+     "id": "grida",
+     "name": "Grida",
+     "repo": "gridaco/grida",
+     "description": "Open-source canvas editor (Rust/Skia engine) for graphics, images and presentations, with Figma import and optional BYOK or local AI.",
+     "coverage": "partial",
+     "note": "Imports Figma files; no component/instance model yet.",
+     "license": "Apache-2.0",
+     "stars": 2678
+    },
+    {
+     "id": "wbo",
+     "name": "WBO (Whitebophir)",
+     "repo": "lovasoa/whitebophir",
+     "description": "Simple self-hosted collaborative whiteboard where many users draw on a large shared board in real time; boards are persisted.",
+     "coverage": "partial",
+     "note": "Freehand collaborative board, far simpler than FigJam.",
+     "license": "AGPL-3.0",
+     "stars": 2670
+    }
+   ]
+  },
+  {
+   "id": "grammarly",
+   "name": "Grammarly",
+   "category": "writing-assistant",
+   "pricing": "See pricing page",
+   "summary": "Cloud writing assistant with free and paid plans that checks grammar, spelling and style, rewrites text with AI, adjusts tone, checks plagiarism and works inside browsers and desktop apps. Text is processed on Grammarly's servers.",
+   "patterns": [
+    "^Grammarly\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "harper",
+     "name": "Harper",
+     "repo": "Automattic/harper",
+     "description": "Fast, offline English grammar and spell checker from Automattic, written in Rust, with browser extensions, editor plugins and a language server.",
+     "coverage": "partial",
+     "note": "English grammar and spelling in the browser and editors, fully offline; no AI rewrite, tone or plagiarism check.",
+     "license": "Apache-2.0",
+     "stars": 16578
+    },
+    {
+     "id": "languagetool",
+     "name": "LanguageTool",
+     "repo": "languagetool-org/languagetool",
+     "description": "Rule-based grammar, spelling and style checker for 25+ languages; the core and HTTP server are open source (LGPL), Premium and AI rules are not.",
+     "coverage": "partial",
+     "note": "Rule-based grammar, spelling and style checks in many languages; no AI rewrite, tone changes or plagiarism check when self-hosted.",
+     "license": "LGPL-2.1-or-later",
+     "stars": 15151
+    },
+    {
+     "id": "vale",
+     "name": "Vale",
+     "repo": "vale-cli/vale",
+     "description": "Offline command-line prose linter that enforces a style guide (Microsoft, Google or your own rules) in your editor, in CI and on Markdown files.",
+     "coverage": "partial",
+     "note": "Rule-based style and terminology checks for docs teams; no grammar engine, AI rewrite or browser extension.",
+     "license": "MIT",
+     "stars": 6250
+    },
+    {
+     "id": "write-good",
+     "name": "write-good",
+     "repo": "btford/write-good",
+     "description": "Small Node.js linter for English prose that flags passive voice, weasel words, wordy phrases and similar style issues.",
+     "coverage": "partial",
+     "note": "Basic English style hints only; no spelling, grammar, AI rewrite or browser extension.",
+     "license": "MIT",
+     "stars": 5098
+    },
+    {
+     "id": "proselint",
+     "name": "proselint",
+     "repo": "amperser/proselint",
+     "description": "Python command-line linter for English prose that flags usage, cliché and style problems based on advice from well-known editors and usage guides.",
+     "coverage": "partial",
+     "note": "English style and usage advice from the command line; no spelling, grammar engine, AI rewrite or browser use.",
+     "license": "BSD-3-Clause",
+     "stars": 4586
+    },
+    {
+     "id": "textlint",
+     "name": "textlint",
+     "repo": "textlint/textlint",
+     "description": "Pluggable Node.js linter for natural-language text, like ESLint for prose; you install rules from npm for the checks you want.",
+     "coverage": "partial",
+     "note": "Configurable rule-based style checks for docs in CI or editors; no built-in rules, grammar engine or AI rewrite.",
+     "license": "MIT",
+     "stars": 3201
+    },
+    {
+     "id": "hunspell",
+     "name": "Hunspell",
+     "repo": "hunspell/hunspell",
+     "description": "Widely used spell-checking library and command-line tool behind LibreOffice, Firefox and Chrome spell check, with dictionaries for many languages.",
+     "coverage": "partial",
+     "note": "Spelling only, as a library and terminal tool; no grammar, style or AI features.",
+     "license": "Tri-licensed LGPL, GPL or MPL (copyleft choices)",
+     "stars": 2606
+    },
+    {
+     "id": "writing-tools",
+     "name": "Writing Tools",
+     "repo": "theJayTea/WritingTools",
+     "description": "System-wide hotkey app that proofreads, rewrites and changes the tone of selected text using a local LLM (Ollama, MLX) or a cloud API.",
+     "coverage": "partial",
+     "note": "On-demand AI proofreading and tone rewrites in any app via hotkey; no live underlines while typing or plagiarism check.",
+     "license": "GPL-3.0",
+     "stars": 2471
+    },
+    {
+     "id": "textidote",
+     "name": "TeXtidote",
+     "repo": "sylvainhalle/textidote",
+     "description": "Command-line spelling, grammar and style checker for LaTeX and Markdown files that maps LanguageTool results back to source lines.",
+     "coverage": "partial",
+     "note": "Grammar and spelling reports for LaTeX and Markdown source files; no live checking in apps, AI rewrite or plagiarism check.",
+     "license": "GPL-3.0",
+     "stars": 1057
+    },
+    {
+     "id": "obsidian-languagetool",
+     "name": "LanguageTool Integration for Obsidian",
+     "repo": "Clemens-E/obsidian-languagetool-plugin",
+     "description": "Obsidian plugin that underlines grammar and spelling issues using the public LanguageTool API, LanguageTool Premium or your own server.",
+     "coverage": "partial",
+     "note": "Grammar and spelling inside Obsidian notes via LanguageTool; private only with a self-hosted server.",
+     "license": "AGPL-3.0",
+     "stars": 576
+    },
+    {
+     "id": "ltex-plus",
+     "name": "LTeX+",
+     "repo": "ltex-plus/ltex-ls-plus",
+     "description": "Language server and VS Code extension that runs LanguageTool offline to check grammar and spelling in LaTeX, Markdown, Typst and other markup.",
+     "coverage": "partial",
+     "note": "Offline grammar and spelling inside code editors for markup files; no browser extension, AI rewrite or plagiarism check.",
+     "license": "MPL-2.0",
+     "stars": 259
+    },
+    {
+     "id": "lexicon",
+     "name": "Lexicon",
+     "repo": "AashishH15/Lexicon",
+     "description": "Local-first desktop editor with LanguageTool proofreading plus offline AI rewrite, tone and summary tools from a bundled small LLM.",
+     "coverage": "partial",
+     "note": "Offline proofreading and AI tone rewrites inside its own editor; no browser extension or plagiarism check.",
+     "license": "MIT",
+     "stars": 219
+    },
+    {
+     "id": "omnipoly",
+     "name": "OmniPoly",
+     "repo": "kWeglinski/OmniPoly",
+     "description": "Self-hosted web front end for your own LanguageTool, Harper, LibreTranslate and Ollama servers to check grammar and translate text.",
+     "coverage": "partial",
+     "note": "Web page for checking pasted text against your own LanguageTool server; no in-app checking, AI rewrite or plagiarism check.",
+     "license": "GPL-3.0",
+     "stars": 120
+    }
+   ]
+  },
+  {
+   "id": "granola",
+   "name": "Granola",
+   "category": "voice",
+   "pricing": "Basic free (30 days of meeting history); Business $14 per user/month; Enterprise $35 per user/month",
+   "summary": "Paid AI notepad that transcribes your meetings without a bot joining and turns your notes into AI meeting notes.",
+   "patterns": [
+    "^Granola\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "fluidvoice",
+     "name": "FluidVoice",
+     "repo": "altic-dev/FluidVoice",
+     "description": "On-device voice dictation app for macOS that also records meetings (FluidMeet) with live captions, speaker labels and transcripts.",
+     "coverage": "partial",
+     "note": "Records and transcribes meetings locally without a bot; summaries only in the 1.6.12 beta; no chat across meetings (a local API lets coding agents read them).",
+     "license": "GPL-3.0",
+     "stars": 12244
+    }
+   ]
+  },
+  {
+   "id": "ida-pro",
+   "name": "IDA Pro",
+   "category": "reverse-engineering",
+   "pricing": "IDA Free available; IDA Home from $365/year; IDA Pro Essential from €1,099/year, Expert from €4,999/year, Ultimate from €8,599/year (annual billing only)",
+   "summary": "Paid Hex-Rays disassembler and decompiler suite for analysing compiled binaries, with a debugger, scripting SDK and an MCP bridge for AI assistants.",
+   "patterns": [
+    "^IDA (Pro|Home|Freeware|Free)\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "rea",
+     "name": "REA (Reverse Engineer Anything)",
+     "repo": "morluto/rea",
+     "description": "MCP server and CLI that lets AI coding agents inspect binaries, JavaScript/Electron apps, .NET assemblies and websites, with evidence.",
+     "coverage": "partial",
+     "note": "Agent layer over Ghidra, IDA or Hopper; it does not disassemble or decompile native code on its own.",
+     "license": "MIT",
+     "stars": 295655
+    },
+    {
+     "id": "ghidra",
+     "name": "Ghidra",
+     "repo": "NationalSecurityAgency/ghidra",
+     "description": "NSA's software reverse engineering framework with disassembly, decompilation, graphing, scripting and a debugger.",
+     "coverage": "partial",
+     "note": "Disassembler, decompiler and debugger; processor and format parity with IDA not checked; no AI assistant built in.",
+     "license": "Apache-2.0",
+     "stars": 89810
+    },
+    {
+     "id": "radare2",
+     "name": "radare2",
+     "repo": "radareorg/radare2",
+     "description": "Command-line reverse engineering framework to analyse, emulate, debug, patch and disassemble binaries across many architectures.",
+     "coverage": "partial",
+     "note": "Command-line first; decompilation needs a plugin such as r2ghidra or r2dec; AI help via the separate r2ai/decai plugins.",
+     "license": "Mostly LGPLv3 (version suffix not stated); plugins and dependencies vary, some GPL",
+     "stars": 25062
+    },
+    {
+     "id": "cutter",
+     "name": "Cutter",
+     "repo": "rizinorg/cutter",
+     "description": "Free and open-source graphical reverse engineering platform built on rizin, with a Ghidra decompiler plugin and Python or C++ plugins.",
+     "coverage": "partial",
+     "note": "GUI disassembler; decompilation via the rz-ghidra plugin; debugging and AI help not checked.",
+     "license": "GPL-3.0",
+     "stars": 20042
+    }
+   ]
+  },
+  {
+   "id": "keeper",
+   "name": "Keeper",
+   "category": "password-managers",
+   "pricing": "See pricing page",
+   "summary": "Keeper sells password management for teams and businesses. Listed alternatives cover vault and sharing work; KeeperPAM, privileged sessions and secrets infrastructure are separate jobs outside this comparison.",
+   "patterns": [
+    "^Keeper (Password Manager|Desktop)\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "bitwarden",
+     "name": "Bitwarden",
+     "repo": "bitwarden/server",
+     "description": "Open-source password manager with browser, desktop, mobile and CLI clients; use the hosted service or self-host the official server with Docker.",
+     "coverage": "partial",
+     "note": "Vault access across devices and organization sharing cover core password management; sharing limits depend on plan and some family or team features require paid Bitwarden plans; breach monitoring is not included in this mapping.",
+     "license": "AGPL-3.0-only",
+     "stars": 20373
+    },
+    {
+     "id": "passbolt",
+     "name": "Passbolt",
+     "repo": "passbolt/passbolt_api",
+     "description": "Self-hosted password manager built for teams, with end-to-end encrypted sharing, browser extensions, mobile apps and a CLI.",
+     "coverage": "partial",
+     "note": "Team password sharing covers collaborative credential management; this comparison does not claim personal autofill, device sync, breach monitoring or enterprise policy parity.",
+     "license": "AGPL-3.0-only",
+     "stars": 6174
+    },
+    {
+     "id": "psono",
+     "name": "Psono",
+     "repo": "psono/psono-server",
+     "description": "Self-hosted password manager for companies with client-side encryption, team sharing, browser extensions and mobile apps.",
+     "coverage": "partial",
+     "note": "Password filling, device sync and secure sharing cover core vault work; Keeper enterprise policy controls, reporting and breach monitoring are not assumed.",
+     "license": "Apache-2.0",
+     "stars": 110
+    }
+   ]
+  },
+  {
+   "id": "lastpass",
+   "name": "LastPass Premium and Families",
+   "category": "password-managers",
+   "pricing": "See pricing page",
+   "summary": "LastPass sells personal and family password management plans. These alternatives cover password storage or sharing, with different family administration and security services.",
+   "patterns": [
+    "^LastPass\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "keepassxc",
+     "name": "KeePassXC",
+     "repo": "keepassxreboot/keepassxc",
+     "description": "Offline desktop password manager for Windows, macOS and Linux that stores your vault in an encrypted KeePass (KDBX) file you control.",
+     "coverage": "partial",
+     "note": "A local encrypted vault and browser integration cover password storage and filling; device sync and shared-vault administration need separate arrangements; paid-service breach monitoring is not replaced.",
+     "license": "GPL-2.0-only OR GPL-3.0-only",
+     "stars": 29270
+    },
+    {
+     "id": "bitwarden",
+     "name": "Bitwarden",
+     "repo": "bitwarden/server",
+     "description": "Open-source password manager with browser, desktop, mobile and CLI clients; use the hosted service or self-host the official server with Docker.",
+     "coverage": "partial",
+     "note": "Vault access across devices and organization sharing cover core password management; sharing limits depend on plan and some family or team features require paid Bitwarden plans; breach monitoring is not included in this mapping.",
+     "license": "AGPL-3.0-only",
+     "stars": 20373
+    },
+    {
+     "id": "passbolt",
+     "name": "Passbolt",
+     "repo": "passbolt/passbolt_api",
+     "description": "Self-hosted password manager built for teams, with end-to-end encrypted sharing, browser extensions, mobile apps and a CLI.",
+     "coverage": "partial",
+     "note": "Team password sharing covers collaborative credential management; this comparison does not claim personal autofill, device sync, breach monitoring or enterprise policy parity.",
+     "license": "AGPL-3.0-only",
+     "stars": 6174
+    }
+   ]
+  },
+  {
+   "id": "linear",
+   "name": "Linear",
+   "category": "project-management",
+   "pricing": "See pricing page",
+   "summary": "Linear sells issue tracking and planning for software teams. Alternatives cover issue and sprint workflows; integrations and the wider planning experience differ.",
+   "patterns": [
+    "^Linear$"
+   ],
+   "alternatives": [
+    {
+     "id": "plane",
+     "name": "Plane",
+     "repo": "makeplane/plane",
+     "description": "Self-hostable project management with work items (issues), cycles (sprints), modules, saved views, pages and analytics; also sold as Plane Cloud.",
+     "coverage": "partial",
+     "note": "Issue tracking and cycles cover backlog and sprint work; Linear integrations and workflow details are not reproduced.",
+     "license": "AGPL-3.0",
+     "stars": 60967
+    },
+    {
+     "id": "onedev",
+     "name": "OneDev",
+     "repo": "theonedev/onedev",
+     "description": "Self-hosted Git server with CI/CD, issue tracking, custom issue workflows and automated kanban boards in one Java app.",
+     "coverage": "partial",
+     "note": "Custom issues and automated Kanban boards cover developer task tracking; this includes Git hosting and CI rather than Linear's full planning experience.",
+     "license": "MIT",
+     "stars": 15314
+    },
+    {
+     "id": "taiga",
+     "name": "Taiga",
+     "repo": "taigaio/taiga-back",
+     "description": "Agile project management with Scrum backlogs and sprints, Kanban boards, epics and issue tracking, self-hosted with Docker or used on taiga.io.",
+     "coverage": "partial",
+     "note": "Scrum, Kanban and issues cover agile delivery; Linear-specific integrations and planning workflows differ.",
+     "license": "MPL-2.0",
+     "stars": 858
+    }
+   ]
+  },
+  {
+   "id": "loom",
+   "name": "Loom",
+   "category": "screen-recording",
+   "pricing": "See pricing page",
+   "summary": "Hosted async video messaging. Record your screen and camera from a desktop app or browser extension, get a share link straight away, and collect comments, reactions and view analytics in a team library. AI titles, summaries and transcripts, plus trimming and basic editing. Recordings are stored in Loom's cloud.",
+   "patterns": [
+    "^Loom\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "obs-studio",
+     "name": "OBS Studio",
+     "repo": "obsproject/obs-studio",
+     "description": "Mature desktop app for recording and streaming screen, camera and audio with scene compositing; saves local files, no share links.",
+     "coverage": "full",
+     "note": "Replaces recording only; no sharing, comments, AI or editing.",
+     "license": "GPL-2.0-or-later",
+     "stars": 77665
+    },
+    {
+     "id": "cap",
+     "name": "Cap",
+     "repo": "CapSoftware/Cap",
+     "description": "Loom-style screen and camera recorder with instant share links, comments, transcripts and analytics; desktop app plus a self-hostable web app.",
+     "coverage": "full",
+     "note": "Covers all six jobs; work use of the official desktop binaries needs a paid licence, and AI features need your own API keys when self-hosted.",
+     "license": "AGPL-3.0-only",
+     "stars": 23378
+    },
+    {
+     "id": "vokoscreenng",
+     "name": "vokoscreenNG",
+     "repo": "vkohaupt/vokoscreenNG",
+     "description": "Screencast recorder for Windows and Linux with a built-in webcam overlay, multi-source audio, magnifier, countdown and click highlights.",
+     "coverage": "full",
+     "note": "Screen plus camera recording to a local file; no sharing, editing or AI.",
+     "license": "GPL-2.0-only",
+     "stars": 1522
+    },
+    {
+     "id": "sendrec",
+     "name": "SendRec",
+     "repo": "sendrec/sendrec",
+     "description": "Self-hosted async video messaging; record screen and camera in the browser, share links, comments, transcripts, AI summaries and viewer analytics.",
+     "coverage": "full",
+     "note": "Covers all six jobs in the browser; trimming is basic (transcript-based), and AI summaries need an OpenAI-compatible API.",
+     "license": "AGPL-3.0-only",
+     "stars": 63
+    },
+    {
+     "id": "sharex",
+     "name": "ShareX",
+     "repo": "ShareX/ShareX",
+     "description": "Windows screenshot and screen recording tool that uploads captures to your chosen destination and copies a share link automatically.",
+     "coverage": "partial",
+     "note": "Records the screen and uploads for a link to storage you configure; no viewer page, comments, AI or analytics. Windows only.",
+     "license": "GPL-3.0-only",
+     "stars": 40129
+    },
+    {
+     "id": "recordly",
+     "name": "Recordly",
+     "repo": "webadderallorg/Recordly",
+     "description": "Desktop screen recorder and editor for polished demos with auto-zoom, cursor effects, webcam bubble and timeline trims; exports MP4 or GIF.",
+     "coverage": "partial",
+     "note": "Records and edits polished demos locally; you share the exported file yourself.",
+     "license": "AGPL-3.0-only",
+     "stars": 34092
+    },
+    {
+     "id": "screentogif",
+     "name": "ScreenToGif",
+     "repo": "NickeManarin/ScreenToGif",
+     "description": "Windows recorder for a screen area, webcam or sketchboard with a built-in editor; exports GIF, APNG, video or images.",
+     "coverage": "partial",
+     "note": "Short screen or webcam clips with an editor; no sharing, comments or AI.",
+     "license": "MS-PL",
+     "stars": 27802
+    },
+    {
+     "id": "screenity",
+     "name": "Screenity",
+     "repo": "alyssaxuu/screenity",
+     "description": "Chrome extension that records tab, screen or camera with annotations, blur and an editor; saves locally or to Google Drive. Share links are paid Pro.",
+     "coverage": "partial",
+     "note": "Recording and trimming in Chrome; sharing only via Google Drive unless you pay for Screenity Pro.",
+     "license": "GPL-3.0-only",
+     "stars": 18779
+    },
+    {
+     "id": "openscreen",
+     "name": "OpenScreen",
+     "repo": "getopenscreen/openscreen",
+     "description": "Desktop recorder and editor for product demos with webcam overlay, auto-zoom, on-device captions and a CLI; MIT, exports MP4 or GIF.",
+     "coverage": "partial",
+     "note": "Records and edits locally with on-device captions and transcript; no AI titles or summaries, hosted sharing, comments or analytics.",
+     "license": "MIT",
+     "stars": 4428
+    },
+    {
+     "id": "kooha",
+     "name": "Kooha",
+     "repo": "SeaDve/Kooha",
+     "description": "Minimal Linux screen recorder (GTK, PipeWire) for a monitor or region with mic and desktop audio; saves WebM, MP4, GIF or MKV.",
+     "coverage": "partial",
+     "note": "Screen and audio recording only; no camera overlay, sharing or editing. Linux only.",
+     "license": "GPL-3.0-or-later",
+     "stars": 3536
+    },
+    {
+     "id": "simplescreenrecorder",
+     "name": "SimpleScreenRecorder",
+     "repo": "MaartenBaert/ssr",
+     "description": "Long-running Linux screen recorder (Qt, FFmpeg) for the whole screen, a region or OpenGL apps; in most distro repositories.",
+     "coverage": "partial",
+     "note": "Screen recording to a local file only; no sharing, editing or AI. Linux only.",
+     "license": "GPL-3.0-only",
+     "stars": 2900
+    }
+   ]
+  },
+  {
+   "id": "microsoft-365",
+   "name": "Microsoft 365",
+   "category": "office",
+   "pricing": "See pricing page",
+   "summary": "Paid subscription office suite (Personal, Family and Business plans) with Excel, Word, PowerPoint, online co-editing and OneDrive cloud storage.",
+   "patterns": [
+    "^Microsoft (365|Office)\\b",
+    "^Microsoft (Word|Excel|PowerPoint|Outlook)\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "cryptpad",
+     "name": "CryptPad",
+     "repo": "cryptpad/cryptpad",
+     "description": "End-to-end encrypted collaboration suite with real-time documents, sheets, presentations, forms and an encrypted drive, self-hosted or on public instances.",
+     "coverage": "partial",
+     "note": "Private, encrypted co-editing and storage in the browser; feature parity with Word, Excel and PowerPoint not checked.",
+     "license": "AGPL-3.0-or-later",
+     "stars": 8012
+    },
+    {
+     "id": "onlyoffice-docs",
+     "name": "ONLYOFFICE Docs (Document Server)",
+     "repo": "ONLYOFFICE/DocumentServer",
+     "description": "Self-hosted online office suite with document, spreadsheet and presentation editors and real-time co-editing of .docx, .xlsx and .pptx files.",
+     "coverage": "partial",
+     "note": "Self-hosted online co-editing; the free edition is recommended for up to 20 users and needs a separate storage platform.",
+     "license": "AGPL-3.0",
+     "stars": 7029
+    },
+    {
+     "id": "onlyoffice-desktopeditors",
+     "name": "ONLYOFFICE Desktop Editors",
+     "repo": "ONLYOFFICE/DesktopEditors",
+     "description": "Free desktop office suite with document, spreadsheet, presentation and PDF editors, built around Office Open XML (.docx, .xlsx, .pptx).",
+     "coverage": "partial",
+     "note": "Offline editors using Microsoft's file formats natively; co-editing only when connected to a separate cloud service. Feature parity not checked.",
+     "license": "AGPL-3.0",
+     "stars": 5577
+    },
+    {
+     "id": "gridcraft",
+     "name": "GridCraft",
+     "repo": "storytold/gridcraft",
+     "description": "Clean-room, Excel-style spreadsheet written in pure Rust, with XLSX as its native format, PivotTables, charts and an MCP server. Part of the ArtCraft suite.",
+     "coverage": "partial",
+     "note": "Alpha; the README estimates it is about 50% ready for real work and file compatibility is still rough. Spreadsheets only.",
+     "license": "MIT OR Apache-2.0",
+     "stars": 5452
+    },
+    {
+     "id": "libreoffice",
+     "name": "LibreOffice",
+     "repo": "LibreOffice/core",
+     "description": "Mature free office suite from The Document Foundation with Writer (documents), Calc (spreadsheets), Impress (presentations), Draw, Base and Math.",
+     "coverage": "partial",
+     "note": "Desktop suite covering Word, Excel and PowerPoint work; no built-in online co-editing or cloud storage. Feature parity not checked.",
+     "license": "MPL-2.0",
+     "stars": 4528
+    }
+   ]
+  },
+  {
+   "id": "miro",
+   "name": "Miro",
+   "category": "graphic-design",
+   "pricing": "See pricing page",
+   "summary": "Miro sells collaborative canvases for diagrams, planning and workshops. These alternatives cover shared drawing boards rather than the full workshop and enterprise platform.",
+   "patterns": [
+    "^Miro\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "excalidraw",
+     "name": "Excalidraw",
+     "repo": "excalidraw/excalidraw",
+     "description": "Hand-drawn style infinite whiteboard for sketches, diagrams and wireframes, with end-to-end encrypted collaboration on excalidraw.com.",
+     "coverage": "partial",
+     "note": "Shared live drawing is available in the hosted app; the documented self-hosted client lacks sharing and collaboration, and Miro workshop facilitation, integrations and enterprise governance are not covered.",
+     "license": "MIT",
+     "stars": 134019
+    },
+    {
+     "id": "wbo",
+     "name": "WBO (Whitebophir)",
+     "repo": "lovasoa/whitebophir",
+     "description": "Simple self-hosted collaborative whiteboard where many users draw on a large shared board in real time; boards are persisted.",
+     "coverage": "partial",
+     "note": "Simultaneous drawing on shared boards covers basic whiteboarding; Miro workshop facilitation, integrations and enterprise controls are not covered.",
+     "license": "AGPL-3.0",
+     "stars": 2670
+    }
+   ]
+  },
+  {
+   "id": "nordpass",
+   "name": "NordPass Premium",
+   "category": "password-managers",
+   "pricing": "See pricing page",
+   "summary": "NordPass offers paid password management and security tools. These alternatives focus on everyday vault access, with different synchronization and monitoring arrangements.",
+   "patterns": [
+    "^NordPass\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "keepassxc",
+     "name": "KeePassXC",
+     "repo": "keepassxreboot/keepassxc",
+     "description": "Offline desktop password manager for Windows, macOS and Linux that stores your vault in an encrypted KeePass (KDBX) file you control.",
+     "coverage": "partial",
+     "note": "A local encrypted vault and browser integration cover password storage and filling; device sync and shared-vault administration need separate arrangements; paid-service breach monitoring is not replaced.",
+     "license": "GPL-2.0-only OR GPL-3.0-only",
+     "stars": 29270
+    },
+    {
+     "id": "bitwarden",
+     "name": "Bitwarden",
+     "repo": "bitwarden/server",
+     "description": "Open-source password manager with browser, desktop, mobile and CLI clients; use the hosted service or self-host the official server with Docker.",
+     "coverage": "partial",
+     "note": "Vaults and clients across devices cover routine password management; NordPass breach monitoring and other premium services are not included in this mapping.",
+     "license": "AGPL-3.0-only",
+     "stars": 20373
+    },
+    {
+     "id": "aliasvault",
+     "name": "AliasVault",
+     "repo": "aliasvault/aliasvault",
+     "description": "End-to-end encrypted password manager with built-in email aliases, TOTP and passkeys; self-host with Docker or use the hosted cloud.",
+     "coverage": "partial",
+     "note": "Password management and browser extensions cover everyday credentials, alongside email aliases; NordPass breach monitoring and complete feature parity are not claimed.",
+     "license": "AGPL-3.0-only",
+     "stars": 3271
+    }
+   ]
+  },
+  {
+   "id": "notion",
+   "name": "Notion",
+   "category": "notes",
+   "pricing": "Free plan; Plus £8.50 and Business £16.50 per member/month billed yearly (GBP as shown); Enterprise custom",
+   "summary": "Paid cloud workspace for notes, wikis and docs, and databases shown as tables and boards, synced across devices.",
+   "patterns": [
+    "^Notion\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "appflowy",
+     "name": "AppFlowy",
+     "repo": "AppFlowy-IO/AppFlowy",
+     "description": "Flutter and Rust desktop and mobile workspace for docs, wikis and projects, positioned as an open-source Notion alternative.",
+     "coverage": "partial",
+     "note": "Open-source client; team sync needs AppFlowy's closed-source server (free self-host tier is 1 seat + 3 guests).",
+     "license": "AGPL-3.0",
+     "stars": 77488
+    },
+    {
+     "id": "affine",
+     "name": "AFFiNE",
+     "repo": "toeverything/AFFiNE",
+     "description": "Local-first workspace merging docs, whiteboard canvas and multi-view databases, with real-time sync and a self-hostable server.",
+     "coverage": "partial",
+     "note": "Docs, databases and real-time sync; free self-host lists up to 10 members per workspace.",
+     "license": "MIT for most code; backend under AFFiNE EE licence (CE parts MPL-2.0)",
+     "stars": 73582
+    },
+    {
+     "id": "joplin",
+     "name": "Joplin",
+     "repo": "laurent22/joplin",
+     "description": "Markdown note-taking app with notebooks, web clipper and end-to-end encrypted sync via Nextcloud, Dropbox, OneDrive, WebDAV, S3 or Joplin Cloud.",
+     "coverage": "partial",
+     "note": "Personal Markdown notes; no databases or wiki-style team workspace documented.",
+     "license": "AGPL-3.0-or-later",
+     "stars": 56765
+    },
+    {
+     "id": "siyuan",
+     "name": "SiYuan",
+     "repo": "siyuan-note/siyuan",
+     "description": "Privacy-first personal knowledge base with block-level references, Markdown WYSIWYG editing, database table views and Docker hosting.",
+     "coverage": "partial",
+     "note": "Block-based notes and database table view; sync across devices is a paid member feature.",
+     "license": "AGPL-3.0",
+     "stars": 46806
+    },
+    {
+     "id": "outline",
+     "name": "Outline",
+     "repo": "outline/outline",
+     "description": "Real-time collaborative team knowledge base and wiki with Markdown support, self-hosted via Docker or used as a hosted service.",
+     "coverage": "partial",
+     "note": "Team wiki with real-time collaboration; BSL forbids offering it as a commercial document service.",
+     "license": "BUSL-1.1",
+     "stars": 40929
+    },
+    {
+     "id": "trilium",
+     "name": "Trilium Notes",
+     "repo": "TriliumNext/Trilium",
+     "description": "Hierarchical note-taking app for large personal knowledge bases, with scripting, encryption and sync to a self-hosted server.",
+     "coverage": "partial",
+     "note": "Personal knowledge base and note sharing; not a real-time team workspace.",
+     "license": "AGPL-3.0",
+     "stars": 38369
+    },
+    {
+     "id": "anytype",
+     "name": "Anytype",
+     "repo": "anyproto/anytype-ts",
+     "description": "Local-first, end-to-end encrypted knowledge base with pages, databases and kanban, optional P2P sync or a self-hosted sync network.",
+     "coverage": "partial",
+     "note": "Source-available, not open source; commercial use limited to Any Association's allowed networks.",
+     "license": "Any Source Available License 1.0 (source-available, not OSI)",
+     "stars": 8934
+    }
+   ]
+  },
+  {
+   "id": "perplexity-pro",
+   "name": "Perplexity Pro",
+   "category": "ai-chat",
+   "pricing": "Free plan; Pro US$17/month billed annually; Max US$167/month billed annually",
+   "summary": "Paid AI answer engine that searches the web and answers with inline citations, with a choice of top models.",
+   "patterns": [
+    "^Perplexity\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "open-webui",
+     "name": "Open WebUI",
+     "repo": "open-webui/open-webui",
+     "description": "Self-hosted AI chat platform for Ollama and OpenAI-compatible APIs, with RAG over your files, web search and multi-user admin.",
+     "coverage": "partial",
+     "note": "Web search injected into chat via SearXNG and other providers; answer quality depends on the model you run.",
+     "license": "Open WebUI License (BSD-3 style + branding clause); not OSI-approved",
+     "stars": 155942
+    },
+    {
+     "id": "anything-llm",
+     "name": "AnythingLLM",
+     "repo": "Mintplex-Labs/anything-llm",
+     "description": "All-in-one desktop or Docker app to chat with your documents using local or cloud LLMs, with agents and a built-in vector database.",
+     "coverage": "partial",
+     "note": "Chat over your own files with citations; web answers only via agent browsing, not a dedicated answer engine.",
+     "license": "MIT",
+     "stars": 67228
+    },
+    {
+     "id": "librechat",
+     "name": "LibreChat",
+     "repo": "LibreChat-AI/LibreChat",
+     "description": "Self-hosted ChatGPT-style interface for many AI providers, with agents, MCP, file chat, web search and multi-user auth.",
+     "coverage": "partial",
+     "note": "Web search combines search providers, scrapers and rerankers; answer quality depends on the model you run.",
+     "license": "MIT",
+     "stars": 45838
+    },
+    {
+     "id": "vane",
+     "name": "Vane (formerly Perplexica)",
+     "repo": "ItzCrazyKns/Vane",
+     "description": "Self-hosted AI answering engine that searches the web through SearxNG and answers with cited sources using local or cloud LLMs.",
+     "coverage": "partial",
+     "note": "Replaces the cited web-answer interface; answer quality depends on the model you run. No premium data sources or Computer features.",
+     "license": "MIT",
+     "stars": 37365
+    }
+   ]
+  },
+  {
+   "id": "quickbooks",
+   "name": "QuickBooks Online",
+   "category": "invoicing",
+   "pricing": "See pricing page",
+   "summary": "Intuit's hosted small-business accounting service. Sends invoices and estimates, takes card and bank payments on invoices, tracks expenses and receipts, pulls bank feeds for reconciliation, and produces accounting reports and tax figures; time tracking and payroll are on higher tiers or add-ons.",
+   "patterns": [
+    "^QuickBooks\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "odoo-community",
+     "name": "Odoo Community",
+     "repo": "odoo/odoo",
+     "description": "LGPL business suite; the Community edition's Invoicing app sends invoices and takes portal payments, with Expenses and Timesheets apps.",
+     "coverage": "partial",
+     "note": "Community has invoicing and payments; financial reports and bank reconciliation are in the full Accounting app, which is not in Community.",
+     "license": "LGPL-3.0-only",
+     "stars": 55101
+    },
+    {
+     "id": "erpnext",
+     "name": "ERPNext",
+     "repo": "frappe/erpnext",
+     "description": "Full open-source ERP on the Frappe framework; its accounting module handles invoices, payments and financial reports, with project timesheets.",
+     "coverage": "partial",
+     "note": "Full accounting inside a much larger ERP; heavier to set up and run.",
+     "license": "GPL-3.0-only",
+     "stars": 40259
+    },
+    {
+     "id": "invoice-ninja",
+     "name": "Invoice Ninja",
+     "repo": "invoiceninja/invoiceninja",
+     "description": "Invoicing app with quotes, recurring invoices, payment gateways, expenses, task timers and a client portal; self-host or use the hosted SaaS.",
+     "coverage": "partial",
+     "note": "Invoicing side only; no double-entry general ledger or payroll.",
+     "license": "Elastic-2.0",
+     "stars": 10287
+    },
+    {
+     "id": "akaunting",
+     "name": "Akaunting",
+     "repo": "akaunting/akaunting",
+     "description": "Laravel accounting app for small businesses with invoices, bills and an app store; free production use is capped at 2 users, 1 company, 1,000 invoices.",
+     "coverage": "partial",
+     "note": "Free use is capped at 2 users, 1 company and 1,000 invoices; bank feeds need the separate Bank Feeds app.",
+     "license": "BUSL-1.1",
+     "stars": 10188
+    },
+    {
+     "id": "dolibarr",
+     "name": "Dolibarr",
+     "repo": "Dolibarr/dolibarr",
+     "description": "Modular PHP ERP and CRM with proposals, invoices, online payments, bank accounts, accounting, expense reports and timesheets; GPL-3.0+.",
+     "coverage": "partial",
+     "note": "Invoicing, payments and accounting; no automatic bank feeds listed in the core.",
+     "license": "GPL-3.0-or-later",
+     "stars": 7733
+    },
+    {
+     "id": "kimai",
+     "name": "Kimai",
+     "repo": "kimai/kimai",
+     "description": "Self-hosted time tracker for freelancers and teams that turns billable timesheets into invoices; rates per customer, project or user.",
+     "coverage": "partial",
+     "note": "Replaces time tracking only.",
+     "license": "AGPL-3.0-only",
+     "stars": 5077
+    },
+    {
+     "id": "gnucash",
+     "name": "GnuCash",
+     "repo": "Gnucash/gnucash",
+     "description": "Desktop double-entry accounting for personal and small-business books, with customer invoices, bills, reconciliation, OFX/QIF import and reports.",
+     "coverage": "partial",
+     "note": "Desktop bookkeeping with invoices and file-based bank import; no online payments, no live bank feeds outside HBCI, no cloud access.",
+     "license": "GPL-2.0-or-later",
+     "stars": 4378
+    },
+    {
+     "id": "bigcapital",
+     "name": "Bigcapital",
+     "repo": "bigcapitalhq/bigcapital",
+     "description": "Double-entry accounting and inventory app with invoices, estimates, Stripe payment links, expenses, Plaid bank sync and financial reports.",
+     "coverage": "partial",
+     "note": "Covers core bookkeeping and invoicing; bank sync needs Plaid credentials; no payroll or time tracking.",
+     "license": "AGPL-3.0-only",
+     "stars": 3942
+    },
+    {
+     "id": "invoiceplane",
+     "name": "InvoicePlane",
+     "repo": "InvoicePlane/InvoicePlane",
+     "description": "Long-running MIT-licensed PHP app for quotes, invoices, clients, products, payment tracking with gateways, and simple reports.",
+     "coverage": "partial",
+     "note": "Invoicing only; no accounting.",
+     "license": "MIT",
+     "stars": 3208
+    },
+    {
+     "id": "invoiceshelf",
+     "name": "InvoiceShelf",
+     "repo": "InvoiceShelf/InvoiceShelf",
+     "description": "Self-hosted invoicing for freelancers and small businesses (Crater-based); invoices, estimates, payments, expenses, recurring invoices and reports.",
+     "coverage": "partial",
+     "note": "Invoicing and expenses only; not a double-entry ledger.",
+     "license": "AGPL-3.0-only",
+     "stars": 1858
+    },
+    {
+     "id": "solidinvoice",
+     "name": "SolidInvoice",
+     "repo": "SolidInvoice/SolidInvoice",
+     "description": "MIT-licensed quotes, invoices, recurring billing and online payments via Stripe, PayPal and other gateways; Docker, single binary or hosted.",
+     "coverage": "partial",
+     "note": "Invoicing and payments only; no accounting.",
+     "license": "MIT",
+     "stars": 980
+    }
+   ]
+  },
+  {
+   "id": "slack",
+   "name": "Slack",
+   "category": "team-chat",
+   "pricing": "See pricing page",
+   "summary": "Hosted workplace chat sold by subscription, with channels, direct messages, threads, huddles for voice and video, an app and bot ecosystem, and searchable message history.",
+   "patterns": [
+    "^Slack\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "rocket-chat",
+     "name": "Rocket.Chat",
+     "repo": "RocketChat/Rocket.Chat",
+     "description": "Open core, self-hosted team chat with channels, threads, DMs, apps and federation; free Starter (50 users) and MIT Community editions.",
+     "coverage": "partial",
+     "note": "Channels, threads, DMs, apps and search; free editions are capped at 50 users (Starter) or 100 concurrent users (Community). Calls need Jitsi, BigBlueButton or similar.",
+     "license": "MIT",
+     "stars": 46281
+    },
+    {
+     "id": "mattermost",
+     "name": "Mattermost",
+     "repo": "mattermost/mattermost",
+     "description": "Open core, self-hosted team chat with channels, threads, calls, playbooks and integrations; a single Go binary backed by PostgreSQL.",
+     "coverage": "partial",
+     "note": "Covers core Slack work; free editions have user, history (Entry) and SSO (Team Edition) limits. Feature parity not checked.",
+     "license": "AGPL-3.0-only",
+     "stars": 39356
+    },
+    {
+     "id": "buzz",
+     "name": "Buzz",
+     "repo": "block/buzz",
+     "description": "Block's self-hostable workspace where people and AI agents share channels, threads, DMs, canvases, workflows and git, built on a Nostr relay.",
+     "coverage": "partial",
+     "note": "Channels, threads, DMs, search and workflows work; mobile apps, push notifications and huddle lifecycle are still being built.",
+     "license": "Apache-2.0",
+     "stars": 36082
+    },
+    {
+     "id": "jitsi-meet",
+     "name": "Jitsi Meet",
+     "repo": "jitsi/jitsi-meet",
+     "description": "Apache-2.0 browser video conferencing with screen sharing, in-call chat and polls; self-host it for calls alongside a team chat.",
+     "coverage": "partial",
+     "note": "Replaces huddles and calls only; pair with a chat server for channels and messages.",
+     "license": "Apache-2.0",
+     "stars": 30099
+    },
+    {
+     "id": "zulip",
+     "name": "Zulip",
+     "repo": "zulip/zulip",
+     "description": "Apache-2.0 team chat built around topic-based threads in channels, self-hosted on Ubuntu or Debian or used as hosted Zulip Cloud.",
+     "coverage": "partial",
+     "note": "Topic threading replaces Slack threads; no built-in huddles (call links via Jitsi or Zoom). Mobile push above 10 users needs a plan.",
+     "license": "Apache-2.0",
+     "stars": 26055
+    },
+    {
+     "id": "fluxer",
+     "name": "Fluxer",
+     "repo": "fluxerapp/fluxer",
+     "description": "AGPL-3.0 instant messaging and VoIP app for groups and communities, with desktop and mobile apps and a free Docker self-host path.",
+     "coverage": "partial",
+     "note": "Community chat with voice and search; young project aimed at groups and communities, not workplace features.",
+     "license": "AGPL-3.0-or-later",
+     "stars": 10607
+    },
+    {
+     "id": "campfire",
+     "name": "Campfire (ONCE)",
+     "repo": "basecamp/once-campfire",
+     "description": "Basecamp's simple MIT-licensed group chat with rooms, DMs, file attachments, search and bot API, shipped as one Docker image.",
+     "coverage": "partial",
+     "note": "Rooms, DMs, search and bots only; no threads or calls.",
+     "license": "MIT",
+     "stars": 4788
+    },
+    {
+     "id": "synapse",
+     "name": "Synapse (Matrix) with Element",
+     "repo": "element-hq/synapse",
+     "description": "Reference Matrix homeserver from Element; pair it with Element apps for federated, end-to-end encrypted rooms, DMs, threads and calls.",
+     "coverage": "partial",
+     "note": "Needs a Matrix client such as Element; workspace admin and integrations differ from Slack. Calls rely on Element Call or Jitsi; feature parity not checked.",
+     "license": "AGPL-3.0-only",
+     "stars": 4703
+    },
+    {
+     "id": "stoat",
+     "name": "Stoat (formerly Revolt)",
+     "repo": "stoatchat/stoatchat",
+     "description": "Discord-style chat platform (renamed from Revolt) with servers, channels, DMs and voice/video, self-hostable with Docker.",
+     "coverage": "partial",
+     "note": "Community-style chat with channels and voice; most official clients do not support self-hosted instances yet.",
+     "license": "AGPL-3.0-or-later",
+     "stars": 3401
+    },
+    {
+     "id": "wire",
+     "name": "Wire",
+     "repo": "wireapp/wire-server",
+     "description": "Backend for Wire, an end-to-end encrypted business messenger with teams, conversations and calls, self-hostable on Kubernetes.",
+     "coverage": "partial",
+     "note": "Encrypted team messaging and calls; heavy Kubernetes self-hosting. Slack-style integrations and search not checked.",
+     "license": "AGPL-3.0-only",
+     "stars": 2781
+    },
+    {
+     "id": "tuwunel",
+     "name": "Tuwunel",
+     "repo": "matrix-construct/tuwunel",
+     "description": "Lightweight Matrix homeserver in Rust, successor to conduwuit; a Synapse alternative to use with Element or other Matrix clients.",
+     "coverage": "partial",
+     "note": "Server only; pair with Element or another Matrix client. Calls, search and bots depend on the client and add-ons.",
+     "license": "Apache-2.0",
+     "stars": 2635
+    },
+    {
+     "id": "nextcloud-talk",
+     "name": "Nextcloud Talk",
+     "repo": "nextcloud/spreed",
+     "description": "Chat, audio and video calls and screen sharing as a Nextcloud app, with bots, webhooks, federation and Nextcloud Files integration.",
+     "coverage": "partial",
+     "note": "Good fit if you already run Nextcloud; simpler chat than Slack, with calls and screen sharing built in.",
+     "license": "AGPL-3.0-or-later",
+     "stars": 2216
+    }
+   ]
+  },
+  {
+   "id": "todoist",
+   "name": "Todoist",
+   "category": "project-management",
+   "pricing": "See pricing page",
+   "summary": "Todoist offers paid personal and team task management. These alternatives cover tasks and visual boards, with different reminders, calendar connections and team controls.",
+   "patterns": [
+    "^Todoist\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "kanboard",
+     "name": "Kanboard",
+     "repo": "kanboard/kanboard",
+     "description": "Minimal self-hosted kanban board in PHP with WIP limits, subtasks, filters and automatic actions; MIT licensed and in maintenance mode.",
+     "coverage": "partial",
+     "note": "Kanban task tracking covers visual planning; it does not reproduce Todoist's natural-language capture, reminder experience or client ecosystem.",
+     "license": "MIT",
+     "stars": 9908
+    },
+    {
+     "id": "vikunja",
+     "name": "Vikunja",
+     "repo": "go-vikunja/vikunja",
+     "description": "Self-hosted task manager with list, kanban, Gantt and table views, shipped as one binary with bundled SQLite; AGPL-3.0.",
+     "coverage": "partial",
+     "note": "Tasks, due dates and shared projects cover everyday planning; Todoist-specific integrations and automation are not assumed.",
+     "license": "AGPL-3.0-or-later",
+     "stars": 5774
+    }
+   ]
+  },
+  {
+   "id": "topaz-gigapixel",
+   "name": "Topaz Gigapixel",
+   "category": "image-upscaling",
+   "pricing": "See pricing page",
+   "summary": "Topaz Labs' desktop image upscaler for Windows and macOS. It enlarges photos up to 16x with a set of AI models (Standard, High Fidelity, Low Resolution, Text and Shapes, Art and CG, generative Wonder and Redefine), recovers faces, renders locally or in Topaz's cloud, batch-processes folders and plugs into Photoshop and Lightroom Classic. It does not upscale video; that is a separate Topaz product.",
+   "patterns": [
+    "^Topaz Gigapixel"
+   ],
+   "alternatives": [
+    {
+     "id": "upscayl",
+     "name": "Upscayl",
+     "repo": "upscayl/upscayl",
+     "description": "Desktop AI image upscaler for Windows, macOS and Linux, built on Real-ESRGAN models running through ncnn and Vulkan.",
+     "coverage": "partial",
+     "note": "Upscaling and batch folders with a Digital Art model; no face recovery, generative models or Photoshop/Lightroom plugin.",
+     "license": "AGPL-3.0",
+     "stars": 50666
+    },
+    {
+     "id": "gfpgan",
+     "name": "GFPGAN",
+     "repo": "TencentARC/GFPGAN",
+     "description": "Tencent ARC face restoration model that repairs blurry, low-res faces in old photos, with optional Real-ESRGAN background upscaling.",
+     "coverage": "partial",
+     "note": "Face recovery is its main job; background upscaling goes through Real-ESRGAN. Command line only.",
+     "license": "Apache-2.0",
+     "stars": 37696
+    },
+    {
+     "id": "real-esrgan",
+     "name": "Real-ESRGAN",
+     "repo": "xinntao/Real-ESRGAN",
+     "description": "Reference AI super-resolution model for real-world photos and anime, with a Python script and portable Vulkan executables.",
+     "coverage": "partial",
+     "note": "Command-line 4x upscaling of files or folders, anime models, and optional GFPGAN face enhancement; no GUI.",
+     "license": "BSD-3-Clause",
+     "stars": 37123
+    },
+    {
+     "id": "codeformer",
+     "name": "CodeFormer",
+     "repo": "sczhou/CodeFormer",
+     "description": "Face restoration model from NTU S-Lab with a fidelity slider, video input and face colorization; non-commercial licence.",
+     "coverage": "partial",
+     "note": "Strong face recovery for personal use only; whole-image upscaling relies on Real-ESRGAN. Command line, non-commercial.",
+     "license": "NTU S-Lab License 1.0 (non-commercial)",
+     "stars": 18182
+    },
+    {
+     "id": "final2x",
+     "name": "Final2x",
+     "repo": "EutropicAI/Final2x",
+     "description": "Cross-platform desktop image super-resolution app with built-in models and support for loading your own.",
+     "coverage": "partial",
+     "note": "Plain model-based upscaling; no face recovery, generative models or editor plugins.",
+     "license": "BSD-3-Clause",
+     "stars": 7383
+    },
+    {
+     "id": "chainner",
+     "name": "chaiNNer",
+     "repo": "chaiNNer-org/chaiNNer",
+     "description": "Node-based image processing app built for AI upscaling, running PyTorch, NCNN, ONNX and TensorRT models on GPU or CPU.",
+     "coverage": "partial",
+     "note": "Covers these jobs with models you choose and chains you build; no generative upscaling models or Photoshop plugin.",
+     "license": "GPL-3.0",
+     "stars": 6079
+    },
+    {
+     "id": "waifu2x-ncnn-vulkan",
+     "name": "waifu2x-ncnn-vulkan",
+     "repo": "nihui/waifu2x-ncnn-vulkan",
+     "description": "Portable command-line waifu2x upscaler and denoiser that runs on Intel, AMD, Nvidia and Apple Silicon GPUs via Vulkan.",
+     "coverage": "partial",
+     "note": "Strongest on anime and illustrations; JPEG denoise and folder batches from the command line; no GUI or face recovery.",
+     "license": "MIT",
+     "stars": 3486
+    },
+    {
+     "id": "qualityscaler",
+     "name": "QualityScaler",
+     "repo": "Djdefrag/QualityScaler",
+     "description": "Windows app that upscales and denoises photos and videos with ONNX models on any DirectX 12 GPU.",
+     "coverage": "partial",
+     "note": "Upscale and denoise many files on Windows; no face recovery, generative models or plugins.",
+     "license": "MIT",
+     "stars": 3209
+    },
+    {
+     "id": "seedvr2-comfyui",
+     "name": "SeedVR2 Video Upscaler (ComfyUI)",
+     "repo": "numz/ComfyUI-SeedVR2_VideoUpscaler",
+     "description": "ComfyUI nodes and standalone CLI for ByteDance's SeedVR2, a one-step diffusion upscaler for images and video.",
+     "coverage": "partial",
+     "note": "Closest open match to Gigapixel's generative upscaling, at a cost of high VRAM and a technical setup.",
+     "license": "Apache-2.0",
+     "stars": 2920
+    }
+   ]
+  },
+  {
+   "id": "trello",
+   "name": "Trello",
+   "category": "project-management",
+   "pricing": "See pricing page",
+   "summary": "Atlassian's cloud kanban app of boards, lists and cards for personal and team task tracking, with paid per-user tiers that add views such as calendar and timeline.",
+   "patterns": [
+    "^Trello$"
+   ],
+   "alternatives": [
+    {
+     "id": "wekan",
+     "name": "WeKan",
+     "repo": "wekan/wekan",
+     "description": "Long-running MIT kanban board app with swimlanes, calendar, Gantt and table views, Trello import, and Windows, Mac and Linux bundles.",
+     "coverage": "partial",
+     "note": "Real-time kanban with calendar and Gantt views and Trello import; feature parity not checked.",
+     "license": "MIT",
+     "stars": 21123
+    },
+    {
+     "id": "planka",
+     "name": "PLANKA",
+     "repo": "plankanban/planka",
+     "description": "Self-hosted real-time kanban boards with Markdown cards, custom fields, stopwatch and 100+ notification providers; fair-code licence.",
+     "coverage": "partial",
+     "note": "Real-time kanban boards; calendar and timeline views are Pro only. Fair-code licence, not open source.",
+     "license": "PLANKA Community License (fair-code \"Fair Use License\", source-available); Pro files under a commercial licence",
+     "stars": 12619
+    },
+    {
+     "id": "leantime",
+     "name": "Leantime",
+     "repo": "Leantime/leantime",
+     "description": "Goals-focused project management with kanban, Gantt, table and calendar views, sprints, milestones, timesheets and wikis; PHP and MySQL.",
+     "coverage": "partial",
+     "note": "Kanban is one of several task views.",
+     "license": "AGPL-3.0",
+     "stars": 11842
+    },
+    {
+     "id": "kanboard",
+     "name": "Kanboard",
+     "repo": "kanboard/kanboard",
+     "description": "Minimal self-hosted kanban board in PHP with WIP limits, subtasks, filters and automatic actions; MIT licensed and in maintenance mode.",
+     "coverage": "partial",
+     "note": "Simple kanban boards with WIP limits and automation; minimalist UI, no new major features planned.",
+     "license": "MIT",
+     "stars": 9908
+    },
+    {
+     "id": "kan",
+     "name": "Kan",
+     "repo": "kanbn/kan",
+     "description": "Trello-style kanban boards with workspaces, labels, comments, templates and Trello import; Next.js and PostgreSQL, AGPL-3.0.",
+     "coverage": "partial",
+     "note": "Boards, members, comments and Trello import; no calendar/timeline views or integrations yet.",
+     "license": "AGPL-3.0",
+     "stars": 5776
+    },
+    {
+     "id": "vikunja",
+     "name": "Vikunja",
+     "repo": "go-vikunja/vikunja",
+     "description": "Self-hosted task manager with list, kanban, Gantt and table views, shipped as one binary with bundled SQLite; AGPL-3.0.",
+     "coverage": "partial",
+     "note": "Kanban and Gantt views over tasks; team admin features are in paid Vikunja Pro.",
+     "license": "AGPL-3.0-or-later",
+     "stars": 5774
+    },
+    {
+     "id": "nextcloud-deck",
+     "name": "Nextcloud Deck",
+     "repo": "nextcloud/deck",
+     "description": "Kanban boards app for Nextcloud with cards, labels, Markdown notes, attachments, comments and sharing; requires a Nextcloud server.",
+     "coverage": "partial",
+     "note": "Kanban boards inside Nextcloud; needs a Nextcloud server and is not built for heavy use.",
+     "license": "AGPL-3.0-or-later",
+     "stars": 1429
+    },
+    {
+     "id": "4ga-boards",
+     "name": "4ga Boards",
+     "repo": "RARgames/4gaBoards",
+     "description": "Real-time kanban boards with projects, boards, lists, cards and tasks, dark mode, Markdown editor, SSO and board import/export; MIT.",
+     "coverage": "partial",
+     "note": "Real-time kanban boards with SSO; no calendar or timeline views listed.",
+     "license": "MIT",
+     "stars": 729
+    }
+   ]
+  },
+  {
+   "id": "zoom",
+   "name": "Zoom Workplace Pro",
+   "category": "team-chat",
+   "pricing": "See pricing page",
+   "summary": "Zoom Workplace offers paid video meetings and collaboration tools. These alternatives cover meetings and screen sharing; Zoom Phone, webinars, AI Companion and the complete Workplace bundle are outside this comparison.",
+   "patterns": [
+    "^Zoom( Workplace)?\\b"
+   ],
+   "alternatives": [
+    {
+     "id": "jitsi-meet",
+     "name": "Jitsi Meet",
+     "repo": "jitsi/jitsi-meet",
+     "description": "Apache-2.0 browser video conferencing with screen sharing, in-call chat and polls; self-host it for calls alongside a team chat.",
+     "coverage": "partial",
+     "note": "Video meetings and content sharing cover live calls; automated summaries, cloud recording operations and Zoom's wider Workplace suite are not covered.",
+     "license": "Apache-2.0",
+     "stars": 30099
+    },
+    {
+     "id": "nextcloud-talk",
+     "name": "Nextcloud Talk",
+     "repo": "nextcloud/spreed",
+     "description": "Chat, audio and video calls and screen sharing as a Nextcloud app, with bots, webhooks, federation and Nextcloud Files integration.",
+     "coverage": "partial",
+     "note": "Private or group calls and screen sharing cover live meetings within Nextcloud; Zoom's wider Workplace bundle and automated summaries are not covered.",
+     "license": "AGPL-3.0-or-later",
+     "stars": 2216
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "DiskQuarry",
+  "version": "0.1.0",
+  "identifier": "dev.repoquarry.diskquarry",
+  "build": {
+    "frontendDist": "../ui"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "DiskQuarry",
+        "width": 1240,
+        "height": 800,
+        "minWidth": 980,
+        "minHeight": 640,
+        "theme": "Dark",
+        "backgroundColor": "#0b0c10",
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' ipc: http://ipc.localhost"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis", "msi"],
+    "publisher": "RepoQuarry",
+    "copyright": "MIT licence",
+    "category": "Utility",
+    "shortDescription": "Windows storage dashboard",
+    "longDescription": "See what is filling your Windows drive: apps, downloads, large files, caches and system data in one dashboard, with open-source swaps from RepoQuarry.",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "nsis": {
+        "installMode": "currentUser"
+      }
+    }
+  }
+}

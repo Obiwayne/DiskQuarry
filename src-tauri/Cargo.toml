@@ -1,0 +1,36 @@
+[package]
+name = "diskquarry"
+version = "0.1.0"
+description = "See what is filling your Windows drive: apps, downloads, large files, caches and system data in one dashboard."
+authors = ["Obiwayne"]
+license = "MIT"
+repository = "https://github.com/Obiwayne/DiskQuarry"
+edition = "2021"
+
+[lib]
+name = "diskquarry_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rayon = "1"
+sysinfo = "0.37"
+dirs = "6"
+trash = "5"
+regex = "1"
+
+[target.'cfg(windows)'.dependencies]
+winreg = "0.55"
+windows-sys = { version = "0.61", features = ["Win32_UI_Shell", "Win32_Foundation"] }
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 3
+panic = "abort"
+strip = true

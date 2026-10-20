@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DiskQuarry</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="drive-card" id="drive-card">
+        <div class="drive-icon" aria-hidden="true"></div>
+        <div class="drive-meta">
+          <select id="drive-select" aria-label="Drive"></select>
+          <div class="drive-usage" id="drive-usage">—</div>
+        </div>
+      </div>
+      <nav id="nav" aria-label="Categories"></nav>
+      <div class="sidebar-foot">
+        <button class="nav-item swaps-link" data-view="swaps" id="swaps-link">
+          <span class="nav-icon rq"></span>
+          <span class="nav-label">Open-source swaps</span>
+          <span class="badge" id="swaps-count" hidden></span>
+        </button>
+        <p class="catalog-note" id="catalog-note"></p>
+      </div>
+    </aside>
+    <main class="main" id="main"></main>
+  </div>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <div class="modal-backdrop" id="modal" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>

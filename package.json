@@ -1,0 +1,20 @@
+{
+  "name": "diskquarry",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Windows storage dashboard: apps, downloads, large files, caches and system data, with open-source swaps from RepoQuarry.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "catalog": "node scripts/build-catalog.mjs",
+    "icons": "node scripts/render-icon.mjs && tauri icon scripts/icon.png -o src-tauri/icons",
+    "test": "cargo test --manifest-path src-tauri/Cargo.toml"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@tauri-apps/cli": "^2.9.0",
+    "yaml": "^2.9.1"
+  }
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c1f27"/>
+      <stop offset="1" stop-color="#0a0b0e"/>
+    </linearGradient>
+  </defs>
+  <rect x="32" y="32" width="960" height="960" rx="216" fill="url(#bg)"/>
+  <rect x="32" y="32" width="960" height="960" rx="216" fill="none" stroke="#2b303b" stroke-width="8"/>
+  <!-- RepoQuarry hexagon block -->
+  <path d="M512 176 L812 346 L812 678 L512 848 L212 678 L212 346 Z" fill="#181b22" stroke="#FD8B40" stroke-width="44" stroke-linejoin="round"/>
+  <path d="M212 346 L512 512 L812 346 M512 512 L512 848" fill="none" stroke="#FD8B40" stroke-width="44" stroke-linejoin="round"/>
+  <!-- storage bars on the front face -->
+  <path d="M262 452 L462 562 L462 622 L262 512 Z" fill="#5b8cff"/>
+  <path d="M262 552 L462 662 L462 722 L262 612 Z" fill="#3ccf91"/>
+  <path d="M562 562 L762 452 L762 512 L562 622 Z" fill="#b57bff"/>
+  <path d="M562 662 L762 552 L762 612 L562 722 Z" fill="#ff5d5d"/>
+</svg>
