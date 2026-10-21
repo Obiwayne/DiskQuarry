@@ -70,6 +70,42 @@ fn disk_space(mount: &str) -> (u64, u64) {
         .unwrap_or((0, 0))
 }
 
+#[derive(Serialize)]
+struct Space {
+    total: u64,
+    free: u64,
+}
+
+#[tauri::command]
+fn drive_space(mount: String) -> Space {
+    let (total, free) = disk_space(&mount);
+    Space { total, free }
+}
+
+#[derive(Serialize)]
+struct Measured {
+    path: String,
+    bytes: u64,
+    files: u64,
+}
+
+/// Re-measures a handful of folders (the ones just cleared, plus the Recycle
+/// Bin) so the dashboard can update without a full scan.
+#[tauri::command]
+async fn measure(paths: Vec<String>) -> Result<Vec<Measured>, String> {
+    tauri::async_runtime::spawn_blocking(move || {
+        paths
+            .into_iter()
+            .map(|path| {
+                let (bytes, files) = scan::folder_size(Path::new(&path));
+                Measured { path, bytes, files }
+            })
+            .collect()
+    })
+    .await
+    .map_err(|e| e.to_string())
+}
+
 #[tauri::command]
 fn list_drives() -> Vec<Drive> {
     let disks = sysinfo::Disks::new_with_refreshed_list();
@@ -327,6 +363,8 @@ pub fn run() {
         .manage(ScanState::default())
         .invoke_handler(tauri::generate_handler![
             list_drives,
+            drive_space,
+            measure,
             start_scan,
             cancel_scan,
             recycle,

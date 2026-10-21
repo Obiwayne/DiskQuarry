@@ -1,6 +1,6 @@
 [package]
 name = "diskquarry"
-version = "0.1.0"
+version = "0.1.1"
 description = "See what is filling your Windows drive: apps, downloads, large files, caches and system data in one dashboard."
 authors = ["Obiwayne"]
 license = "MIT"

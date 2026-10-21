@@ -516,6 +516,52 @@ async function startScan() {
   }
 }
 
+const binPath = () => state.result.mount.replace(/\\?$/, '\\') + '$Recycle.Bin';
+
+// Re-measures only the folders an action touched, plus the Recycle Bin, then
+// updates the totals and free space. Much faster than a full scan. Returns the
+// change in bytes for each measured path (negative means space was cleared).
+async function refreshFolders(dirs = []) {
+  const r = state.result;
+  const deltas = {};
+  if (!r) return deltas;
+  const caches = r.categories.find((c) => c.cat === 'caches');
+  try {
+    const measured = await invoke('measure', { paths: [...dirs, binPath()] });
+    for (const m of measured) {
+      let f = r.caches.find((x) => x.path.toLowerCase() === m.path.toLowerCase());
+      if (!f) {
+        if (!m.bytes) continue;
+        f = { path: m.path, name: m.path.split('\\').pop(), cat: 'caches', bytes: 0, files: 0, children: [] };
+        r.caches.push(f);
+      }
+      deltas[m.path] = m.bytes - f.bytes;
+      caches.bytes = Math.max(0, caches.bytes + m.bytes - f.bytes);
+      caches.files = Math.max(0, caches.files + m.files - f.files);
+      f.bytes = m.bytes;
+      f.files = m.files;
+    }
+    const space = await invoke('drive_space', { mount: r.mount });
+    if (space.total) {
+      r.total = space.total;
+      r.free = space.free;
+      r.used = space.total - space.free;
+      const d = state.drives.find((x) => x.mount === r.mount);
+      if (d) Object.assign(d, space);
+    }
+  } catch (e) {
+    toast(esc(e));
+  }
+  render();
+  return deltas;
+}
+
+async function emptyBin() {
+  await invoke('empty_recycle_bin');
+  const freed = -((await refreshFolders())[binPath()] ?? 0);
+  if (freed > 0) toast(`Recycle Bin emptied. ${fmt(freed)} freed.`);
+}
+
 async function recycleFiles(paths) {
   const r = state.result;
   const lists = [['large', r.large_files], ['downloads', r.downloads]];
@@ -534,19 +580,16 @@ async function recycleFiles(paths) {
     toast(esc(e));
     return;
   }
-  // The bytes now sit in $Recycle.Bin, which DiskQuarry counts as a cache.
   for (const [key, list] of lists) {
     const gone = list.filter((f) => paths.includes(f.path));
     const c = r.categories.find((x) => x.cat === key);
     for (const f of gone) { c.bytes -= f.bytes; c.files -= 1; }
-    const cc = r.categories.find((x) => x.cat === 'caches');
-    cc.bytes += gone.reduce((n, f) => n + f.bytes, 0);
-    cc.files += gone.length;
     const keep = list.filter((f) => !paths.includes(f.path));
     if (key === 'large') r.large_files = keep; else r.downloads = keep;
   }
   paths.forEach((p) => state.selected.delete(p));
-  render();
+  // The files now sit in $Recycle.Bin, which DiskQuarry counts as a cache.
+  await refreshFolders();
   toast(`Moved ${items.length} item${items.length === 1 ? '' : 's'} (${fmt(bytes)}) to the Recycle Bin. <button class="btn small" data-action="empty-bin">Empty Recycle Bin</button>`, 9000);
 }
 
@@ -563,7 +606,9 @@ async function clearCache(label) {
   if (!ok) return;
   try {
     const res = await invoke('recycle_contents', { dirs });
-    toast(`Moved ${num(res.moved)} item${res.moved === 1 ? '' : 's'} to the Recycle Bin${res.skipped ? `, skipped ${num(res.skipped)} in use` : ''}. <button class="btn small" data-action="analyze">Analyze again</button>`, 9000);
+    const deltas = await refreshFolders(dirs);
+    const cleared = -dirs.reduce((n, d) => n + Math.min(0, deltas[d] ?? 0), 0);
+    toast(`Cleared ${fmt(cleared)} from ${esc(label)}${res.skipped ? `, skipped ${num(res.skipped)} in use` : ''}. It is in the Recycle Bin until you empty it. <button class="btn small" data-action="empty-bin">Empty Recycle Bin</button>`, 9000);
   } catch (e) {
     toast(esc(e));
   }
@@ -589,7 +634,7 @@ async function onClick(e) {
       case 'open': return invoke('open_path', { path });
       case 'settings': return invoke('open_settings', { page: a.dataset.page });
       case 'url': return invoke('open_url', { url: a.dataset.url });
-      case 'empty-bin': return invoke('empty_recycle_bin');
+      case 'empty-bin': return emptyBin();
       case 'recycle-one': return recycleFiles([path]);
       case 'recycle-selected': return recycleFiles([...state.selected]);
       case 'clear-cache': return clearCache(a.dataset.label);
@@ -668,13 +713,31 @@ const Demo = {
         setTimeout(() => { clearInterval(t); this.emit('scan-done', this.result()); }, Number(new URLSearchParams(location.search).get('scanms') ?? 1800));
         return null;
       }
-      case 'recycle': return args.paths.length;
-      case 'recycle_contents': return { moved: 412, skipped: 9 };
+      case 'recycle': {
+        const r = this.last;
+        this.bin += [...r.large_files, ...r.downloads].filter((f) => args.paths.includes(f.path)).reduce((n, f) => n + f.bytes, 0);
+        return args.paths.length;
+      }
+      case 'recycle_contents': {
+        for (const d of args.dirs) { const f = this.last.caches.find((x) => x.path === d); this.bin += f.bytes; this.cleared.add(d); }
+        return { moved: 412, skipped: 9 };
+      }
+      case 'measure':
+        return args.paths.map((path) => /\$Recycle\.Bin$/i.test(path)
+          ? { path, bytes: this.bin, files: this.bin ? 2310 : 0 }
+          : { path, bytes: this.cleared.has(path) ? 0 : this.last.caches.find((x) => x.path === path)?.bytes ?? 0, files: 0 });
+      case 'empty_recycle_bin': this.freed += this.bin; this.bin = 0; return null;
+      case 'drive_space': return { total: 953 * GB, free: 541.4 * GB + this.freed };
       default: return null;
     }
   },
+  bin: 6.2 * 1024 ** 3,
+  freed: 0,
+  cleared: new Set(),
+  last: null,
   result() {
     const r = this.raw();
+    this.last = r;
     for (const k of ['large_files', 'downloads', 'caches', 'system', 'system_files', 'app_folders', 'other_folders', 'apps']) r[k].sort((a, b) => b.bytes - a.bytes);
     return r;
   },

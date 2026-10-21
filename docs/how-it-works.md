@@ -37,6 +37,8 @@ There is no framework and no bundler on the front end. Tauri serves `ui/` straig
    - Space that could not be read (System Restore snapshots, other users' profiles, NTFS metadata) is added to Other and called out there.
 5. **Things that are skipped:** symlinks and junctions (they point at space counted elsewhere), and OneDrive "online-only" placeholders, which report a full size but use no local space (`OFFLINE`, `RECALL_ON_OPEN` and `RECALL_ON_DATA_ACCESS` attributes count as 0 bytes).
 
+After a clean-up action the app does not rescan the drive. The `measure` command walks only the folders that were cleared plus `$Recycle.Bin` with the same rules (symlinks skipped, placeholders at 0 bytes), the dashboard applies the differences to the category totals, and `drive_space` refreshes used and free space. Moving files to the Recycle Bin moves their bytes into Caches; emptying the bin is what frees space.
+
 Progress (files, bytes, current folder) is emitted every 150 ms. Stop sets a flag every worker checks before opening the next folder.
 
 ## Safety

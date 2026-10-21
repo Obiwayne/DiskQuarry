@@ -6,6 +6,7 @@
 
 - **One pass, every byte counted once.** A parallel Rust scanner sorts each file into exactly one category, so the bar adds up to what Windows says is in use. On a 1 TB drive with 2.2 million files it finished in 9 s warm (41 s cold) and was within 0.2% of the used space Windows reports.
 - **Six categories:** Applications, Downloads, Large Files (100 MB and up), Caches, System Data, Other.
+- **Instant updates after a clean-up.** Clearing a cache, moving files to the Recycle Bin or emptying it re-measures only the folders involved and the bin, then refreshes free space, in milliseconds rather than another full scan.
 - **Safe by default.** Nothing is ever deleted outright. Files and cache contents go to the Recycle Bin after a confirmation, Windows, Program Files and ProgramData are refused by the backend, and uninstalling goes through Windows Settings.
 - **Open-source swaps.** Installed paid apps (Adobe, Microsoft 365, Slack, Notion, Dropbox, Zoom and 23 more) are matched to sourced alternatives listed on RepoQuarry, with licence, stars and how much of the job each one covers.
 - **Small and native.** Tauri 2 + Rust, WebView2 UI, no telemetry, no network calls. The installer is a few megabytes.

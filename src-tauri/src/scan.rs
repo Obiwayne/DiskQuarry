@@ -245,6 +245,35 @@ fn local_size(md: &fs::Metadata) -> u64 {
     md.len()
 }
 
+/// Bytes and file count under one folder, measured the same way as a full scan
+/// (symlinks and junctions skipped, cloud placeholders count as 0). Used to
+/// refresh a few folders after a clean-up without rescanning the drive.
+pub fn folder_size(dir: &Path) -> (u64, u64) {
+    let Ok(rd) = fs::read_dir(dir) else {
+        return (0, 0);
+    };
+    let mut bytes = 0;
+    let mut files = 0;
+    let mut subdirs = Vec::new();
+    for entry in rd.flatten() {
+        let Ok(ft) = entry.file_type() else { continue };
+        if ft.is_symlink() {
+            continue;
+        }
+        if ft.is_dir() {
+            subdirs.push(entry.path());
+        } else if let Ok(md) = entry.metadata() {
+            bytes += local_size(&md);
+            files += 1;
+        }
+    }
+    let (b, f) = subdirs
+        .par_iter()
+        .map(|d| folder_size(d))
+        .reduce(|| (0, 0), |a, b| (a.0 + b.0, a.1 + b.1));
+    (bytes + b, files + f)
+}
+
 fn join(dir_l: &str, name: &str) -> String {
     if dir_l.ends_with('\\') {
         format!("{}{}", dir_l, name)
@@ -546,6 +575,8 @@ mod tests {
         assert_eq!(out.totals.bytes[Cat::Other as usize], 5);
         assert_eq!(out.downloads.len(), 1);
         assert!(out.zone_roots.iter().any(|f| f.cat == Cat::Caches && f.name == "cache"));
+        assert_eq!(folder_size(&tmp.join("stuff")), (4096 + 5, 2));
+        assert_eq!(folder_size(&tmp.join("missing")), (0, 0));
         let _ = fs::remove_dir_all(&tmp);
     }
 }
